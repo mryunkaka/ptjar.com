@@ -1,0 +1,712 @@
+[31-Mar-2024 05:29:53 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[31-Mar-2024 05:30:23 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[31-Mar-2024 05:30:53 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[31-Mar-2024 05:31:53 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[31-Mar-2024 05:33:22 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[31-Mar-2024 05:36:33 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[31-Mar-2024 05:42:34 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[31-Mar-2024 05:53:33 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[31-Mar-2024 06:08:15 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[31-Mar-2024 06:25:07 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[31-Mar-2024 06:39:59 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[03-Apr-2024 04:27:42 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[03-Apr-2024 19:49:23 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[05-Apr-2024 04:27:30 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[20-Feb-2025 03:08:51 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[20-Feb-2025 04:46:32 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[21-Feb-2025 03:34:15 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[21-Feb-2025 04:44:22 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[21-Feb-2025 04:45:01 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[22-Feb-2025 04:56:47 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[22-Feb-2025 05:04:40 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[22-Feb-2025 05:13:34 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[23-Feb-2025 15:50:05 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[24-Feb-2025 06:52:35 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[24-Feb-2025 18:55:44 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[04-Mar-2025 03:29:36 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[12-Mar-2025 13:39:06 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[25-Mar-2025 15:33:41 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[30-Mar-2025 10:33:23 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[06-May-2025 23:11:02 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[16-Jun-2025 22:50:23 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[17-Jun-2025 20:39:55 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[17-Jun-2025 20:41:19 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[03-Jul-2025 09:33:19 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[04-Jul-2025 23:04:17 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[06-Jul-2025 13:12:35 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[17-Jul-2025 07:19:39 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[26-Aug-2025 08:12:43 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[27-Aug-2025 15:53:35 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[07-Sep-2025 06:59:51 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[07-Sep-2025 07:03:12 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[10-Sep-2025 04:24:36 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[27-Sep-2025 11:44:34 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[30-Oct-2025 08:09:16 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[30-Oct-2025 08:11:56 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[30-Oct-2025 10:46:09 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[30-Oct-2025 10:48:40 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[01-Nov-2025 03:55:12 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[01-Nov-2025 03:56:01 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[12-Dec-2025 11:11:20 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[14-Dec-2025 17:11:51 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[15-Dec-2025 15:37:52 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[16-Dec-2025 02:54:21 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[16-Dec-2025 14:45:17 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[16-Dec-2025 19:15:43 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[16-Dec-2025 22:17:57 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[17-Dec-2025 04:51:48 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[17-Dec-2025 05:45:26 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[19-Dec-2025 10:21:24 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[20-Dec-2025 11:31:56 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[21-Dec-2025 11:12:11 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[22-Dec-2025 19:50:32 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[23-Dec-2025 18:50:55 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[25-Dec-2025 16:30:46 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[29-Dec-2025 05:40:21 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[31-Dec-2025 23:00:35 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[03-Jan-2026 22:41:09 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[05-Jan-2026 06:41:47 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[05-Jan-2026 20:39:20 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[06-Jan-2026 18:01:34 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[09-Jan-2026 12:40:07 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[10-Jan-2026 12:11:36 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[12-Jan-2026 13:52:25 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[12-Jan-2026 18:03:42 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[13-Jan-2026 20:03:51 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[14-Jan-2026 19:41:31 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[15-Jan-2026 20:21:29 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[16-Jan-2026 19:44:14 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[18-Jan-2026 19:44:47 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[19-Jan-2026 19:43:20 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[20-Jan-2026 19:48:30 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[21-Jan-2026 20:11:30 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[22-Jan-2026 20:32:30 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[23-Jan-2026 20:54:17 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[24-Jan-2026 20:14:28 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[25-Jan-2026 20:53:16 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[26-Jan-2026 21:49:33 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[27-Jan-2026 19:24:33 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[28-Jan-2026 14:31:32 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[29-Jan-2026 14:08:43 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[29-Jan-2026 19:25:06 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[30-Jan-2026 19:28:31 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[31-Jan-2026 19:38:30 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[02-Feb-2026 19:33:05 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[04-Feb-2026 10:19:29 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[04-Feb-2026 23:38:11 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[05-Feb-2026 21:05:10 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[07-Feb-2026 03:25:43 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[09-Feb-2026 16:28:23 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[09-Feb-2026 21:36:32 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[11-Feb-2026 02:32:49 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[13-Feb-2026 02:51:16 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[15-Feb-2026 02:54:07 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[16-Feb-2026 14:41:06 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[17-Feb-2026 23:51:45 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[19-Feb-2026 23:40:54 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[21-Feb-2026 23:51:50 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[23-Feb-2026 23:21:28 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[25-Feb-2026 23:27:34 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[27-Feb-2026 23:54:28 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[04-Mar-2026 00:04:59 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[06-Mar-2026 01:35:01 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[08-Mar-2026 00:34:00 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[10-Mar-2026 00:51:26 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[12-Mar-2026 00:33:48 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[12-Mar-2026 11:09:36 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[12-Mar-2026 14:00:49 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[14-Mar-2026 00:56:35 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[17-Mar-2026 22:06:11 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[18-Mar-2026 01:52:46 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[20-Mar-2026 00:53:20 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[22-Mar-2026 01:38:39 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[24-Mar-2026 03:27:20 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[25-Mar-2026 19:52:53 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[26-Mar-2026 02:34:07 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[28-Mar-2026 07:34:13 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[30-Mar-2026 04:54:44 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[01-Apr-2026 04:46:31 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[03-Apr-2026 08:49:20 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[05-Apr-2026 07:34:08 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[07-Apr-2026 06:48:03 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[09-Apr-2026 08:16:24 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[11-Apr-2026 10:17:12 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[13-Apr-2026 11:29:43 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[15-Apr-2026 14:41:41 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[16-Apr-2026 00:40:42 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[16-Apr-2026 00:41:01 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[16-Apr-2026 21:23:59 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[17-Apr-2026 09:21:12 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[18-Apr-2026 17:56:11 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[18-Apr-2026 23:20:56 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[20-Apr-2026 22:31:12 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[21-Apr-2026 23:02:45 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[23-Apr-2026 21:01:23 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[24-Apr-2026 21:21:13 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[25-Apr-2026 20:00:43 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[26-Apr-2026 19:40:34 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[27-Apr-2026 19:21:22 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[28-Apr-2026 18:22:12 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[29-Apr-2026 18:50:55 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[30-Apr-2026 18:20:49 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[01-May-2026 19:00:25 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[02-May-2026 19:02:16 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[03-May-2026 12:02:40 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[03-May-2026 21:01:57 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[06-May-2026 07:02:39 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[09-May-2026 02:36:21 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[10-May-2026 03:41:10 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[12-Jun-2026 17:54:15 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[16-Jun-2026 21:37:16 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[07-Jul-2026 16:11:33 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[10-Jul-2026 00:08:09 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[10-Jul-2026 01:57:54 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[12-Jul-2026 18:50:38 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[12-Jul-2026 20:53:36 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[15-Jul-2026 22:38:25 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[16-Jul-2026 00:05:38 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[18-Jul-2026 16:44:08 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[18-Jul-2026 18:13:40 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[21-Jul-2026 11:42:48 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[21-Jul-2026 11:55:31 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[22-Jul-2026 02:00:23 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[28-Aug-2026 10:32:49 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[30-Aug-2026 09:08:07 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[31-Aug-2026 11:19:59 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[16-Sep-2026 19:34:43 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[16-Sep-2026 19:46:01 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
+[16-Sep-2026 19:47:35 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Grav\Common\Plugin' not found in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ptja7182/public_html/assets/select2/docs/plugins/error/error.php on line 11
