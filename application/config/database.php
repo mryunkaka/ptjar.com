@@ -73,6 +73,52 @@ defined('BASEPATH') or exit('No direct script access allowed');
 $active_group = 'default';
 $query_builder = TRUE;
 
+// Load the project-local .env file when present. Hosting environment variables
+// take precedence and can be used without shipping a .env file.
+$ptjarcomEnvPath = dirname(APPPATH) . DIRECTORY_SEPARATOR . '.env';
+$ptjarcomEnvKeys = array(
+	'PTJARCOM_DB_HOST',
+	'PTJARCOM_DB_PORT',
+	'PTJARCOM_DB_USER',
+	'PTJARCOM_DB_PASSWORD',
+	'PTJARCOM_DB_NAME',
+	'PTJARCOM_DB_CHARSET',
+	'PTJARCOM_DB_COLLATION'
+);
+
+if (is_readable($ptjarcomEnvPath))
+{
+	foreach (file($ptjarcomEnvPath, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES) as $ptjarcomEnvLine)
+	{
+		$ptjarcomEnvLine = trim($ptjarcomEnvLine);
+		if ($ptjarcomEnvLine === '' || $ptjarcomEnvLine[0] === '#' || strpos($ptjarcomEnvLine, '=') === FALSE)
+		{
+			continue;
+		}
+
+		list($ptjarcomEnvKey, $ptjarcomEnvValue) = explode('=', $ptjarcomEnvLine, 2);
+		$ptjarcomEnvKey = trim($ptjarcomEnvKey);
+		$ptjarcomEnvValue = trim($ptjarcomEnvValue);
+		if (!in_array($ptjarcomEnvKey, $ptjarcomEnvKeys, TRUE))
+		{
+			continue;
+		}
+
+		if (strlen($ptjarcomEnvValue) >= 2
+			&& (($ptjarcomEnvValue[0] === '"' && substr($ptjarcomEnvValue, -1) === '"')
+				|| ($ptjarcomEnvValue[0] === "'" && substr($ptjarcomEnvValue, -1) === "'")))
+		{
+			$ptjarcomEnvValue = substr($ptjarcomEnvValue, 1, -1);
+		}
+
+		if (getenv($ptjarcomEnvKey) === FALSE)
+		{
+			putenv($ptjarcomEnvKey . '=' . $ptjarcomEnvValue);
+			$_ENV[$ptjarcomEnvKey] = $ptjarcomEnvValue;
+		}
+	}
+}
+
 $db['lokal'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
@@ -97,6 +143,7 @@ $db['lokal'] = array(
 $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => getenv('PTJARCOM_DB_HOST') ?: 'localhost',
+	'port' => (int) (getenv('PTJARCOM_DB_PORT') ?: 3306),
 	'username' => getenv('PTJARCOM_DB_USER') ?: '',
 	'password' => getenv('PTJARCOM_DB_PASSWORD') ?: '',
 	'database' => getenv('PTJARCOM_DB_NAME') ?: '',
@@ -106,8 +153,8 @@ $db['default'] = array(
 	'db_debug' => (ENVIRONMENT !== 'production'),
 	'cache_on' => FALSE,
 	'cachedir' => '',
-	'char_set' => 'utf8',
-	'dbcollat' => 'utf8_general_ci',
+	'char_set' => getenv('PTJARCOM_DB_CHARSET') ?: 'utf8mb4',
+	'dbcollat' => getenv('PTJARCOM_DB_COLLATION') ?: 'utf8mb4_unicode_ci',
 	'swap_pre' => '',
 	'encrypt' => FALSE,
 	'compress' => FALSE,
@@ -115,39 +162,3 @@ $db['default'] = array(
 	'failover' => array(),
 	'save_queries' => TRUE
 );
-
-// Use the isolated WebStack database only for the local Nginx site.
-$ptjarcomLocalEnvPath = 'C:/WebStack/config/ptjarcom-db.ini';
-$ptjarcomHost = isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : '';
-if (preg_match('/^(localhost|127\.0\.0\.1):8084$/i', $ptjarcomHost)
-	&& is_readable($ptjarcomLocalEnvPath)
-)
-{
-	$ptjarcomLocalEnv = parse_ini_file($ptjarcomLocalEnvPath, FALSE, INI_SCANNER_RAW);
-	if (is_array($ptjarcomLocalEnv))
-	{
-		$active_group = 'ptjarcom_local';
-		$db['ptjarcom_local'] = array(
-			'dsn' => '',
-			'hostname' => $ptjarcomLocalEnv['PTJARCOM_DB_HOST'],
-			'port' => (int) $ptjarcomLocalEnv['PTJARCOM_DB_PORT'],
-			'username' => $ptjarcomLocalEnv['PTJARCOM_DB_USER'],
-			'password' => $ptjarcomLocalEnv['PTJARCOM_DB_PASSWORD'],
-			'database' => $ptjarcomLocalEnv['PTJARCOM_DB_NAME'],
-			'dbdriver' => 'mysqli',
-			'dbprefix' => '',
-			'pconnect' => FALSE,
-			'db_debug' => FALSE,
-			'cache_on' => FALSE,
-			'cachedir' => '',
-			'char_set' => 'utf8mb4',
-			'dbcollat' => 'utf8mb4_0900_ai_ci',
-			'swap_pre' => '',
-			'encrypt' => FALSE,
-			'compress' => FALSE,
-			'stricton' => FALSE,
-			'failover' => array(),
-			'save_queries' => FALSE
-		);
-	}
-}

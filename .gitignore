@@ -68,3 +68,4 @@ user_guide_src/cilexer/pycilexer.egg-info/*
 /assets/file/frontend/pdf/PIAGAM.pdf
 /assets/HeroBiz-pro/assets/img/hero-carousel/services-8.svg
 /application/cache/sessions/*
+/.env
