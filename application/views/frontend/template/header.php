@@ -14,7 +14,7 @@
 
 
   <!-- Favicons -->
-  <link href="<?= base_url() ?>assets/file/frontend/image/template/iconjar.png" rel="icon">
+  <link href="<?= base_url() ?>favicon.png?v=2" rel="icon" type="image/png">
   <!-- <link href="<?= base_url('assets/HeroBiz-pro') ?>/assets/img/favicon.png" rel="icon"> -->
   <!--<link href="<?= base_url('assets/HeroBiz-pro') ?>/assets/img/apple-touch-icon.png" rel="apple-touch-icon">-->
     <link href="<?= base_url() ?>assets/file/frontend/image/template/iconjar.png" rel="apple-touch-icon">
