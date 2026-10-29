@@ -4,6 +4,154 @@
     max-height: 720px;
     width: 100%;
   }
+
+  .recruitment-notice-modal .modal-dialog {
+    width: min(92vw, 1060px);
+    max-width: none;
+    margin: 3vh auto;
+  }
+
+  .recruitment-notice-modal .modal-content {
+    position: relative;
+    overflow: hidden;
+    max-height: 94vh;
+    border: 0;
+    border-radius: 12px;
+    background: #080706;
+    box-shadow: 0 24px 90px rgba(0, 0, 0, .65);
+  }
+
+  .modal-backdrop.recruitment-notice-backdrop.show {
+    opacity: .9;
+  }
+
+  .recruitment-notice-modal__close {
+    position: absolute;
+    top: .65rem;
+    right: .65rem;
+    z-index: 5;
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: .75rem;
+    border: 1px solid rgba(255, 255, 255, .55);
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, .72);
+    background-size: 48%;
+    filter: invert(1);
+    opacity: .95;
+  }
+
+  .recruitment-notice-modal .modal-body {
+    position: relative;
+    min-height: 0;
+    padding: 3.5rem 4.25rem 1rem;
+    background: #080706;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .recruitment-notice-modal .modal-body::-webkit-scrollbar {
+    display: none;
+  }
+
+  .recruitment-notice-modal__slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .recruitment-notice-modal__slide a {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: flex-start;
+    background: #080706;
+  }
+
+  .recruitment-notice-modal__slide a:focus-visible {
+    outline: 3px solid #f0c52a;
+    outline-offset: -4px;
+  }
+
+  .recruitment-notice-modal__slide img {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .recruitment-notice-modal .carousel-control-prev-icon,
+  .recruitment-notice-modal .carousel-control-next-icon {
+    width: 2.7rem;
+    height: 2.7rem;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, .58);
+    background-size: 52%;
+    filter: drop-shadow(0 1px 3px rgba(0, 0, 0, .85));
+  }
+
+  .recruitment-notice-modal .carousel-control-prev,
+  .recruitment-notice-modal .carousel-control-next {
+    position: fixed;
+    opacity: 1;
+    top: 50%;
+    bottom: auto;
+    width: 3.5rem;
+    height: 3.5rem;
+    transform: translateY(-50%);
+  }
+
+  .recruitment-notice-modal .carousel-control-prev {
+    left: max(.5rem, calc((100vw - min(92vw, 1060px)) / 2 - 3.75rem));
+  }
+
+  .recruitment-notice-modal .carousel-control-next {
+    right: max(.5rem, calc((100vw - min(92vw, 1060px)) / 2 - 3.75rem));
+  }
+
+  .recruitment-notice-modal__close {
+    top: .5rem;
+    right: .5rem;
+  }
+
+  @media (max-width: 575.98px) {
+    .recruitment-notice-modal .modal-dialog {
+      width: 98vw;
+      max-width: none;
+      margin: 2vh auto;
+    }
+
+    .recruitment-notice-modal .modal-content {
+      max-height: 96vh;
+    }
+
+    .recruitment-notice-modal .modal-body {
+      padding: 3.5rem 3.25rem .75rem;
+    }
+
+    .recruitment-notice-modal .carousel-control-prev {
+      left: .25rem;
+    }
+
+    .recruitment-notice-modal .carousel-control-next {
+      right: .25rem;
+    }
+
+    .recruitment-notice-modal .carousel-control-prev-icon,
+    .recruitment-notice-modal .carousel-control-next-icon {
+      width: 2.4rem;
+      height: 2.4rem;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .recruitment-notice-modal .carousel-item {
+      transition: none;
+    }
+  }
 </style>
 <main id="main">
 
@@ -275,3 +423,60 @@
 
 
 </main><!-- End #main -->
+
+<div class="modal fade recruitment-notice-modal" id="recruitment-warning-modal" tabindex="-1" aria-label="Pengumuman resmi: Waspada Penipuan Rekrutmen" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <button type="button" class="btn-close recruitment-notice-modal__close" data-bs-dismiss="modal" aria-label="Tutup pengumuman"></button>
+
+      <div class="modal-body">
+        <div id="recruitment-notice-carousel" class="carousel slide" role="region" aria-roledescription="carousel" aria-label="Poster klarifikasi rekrutmen" data-bs-touch="true" data-bs-wrap="true" data-bs-interval="false">
+          <div class="carousel-inner" aria-live="polite">
+            <div class="carousel-item active" role="group" aria-roledescription="slide" aria-label="Poster 1 dari 2">
+              <div class="recruitment-notice-modal__slide">
+                <a href="<?= base_url('assets/file/frontend/image/recruitment/klarifikasi-rekrutmen-1.jpeg') ?>" target="_blank" rel="noopener noreferrer" aria-label="Buka poster klarifikasi rekrutmen bagian pertama ukuran penuh">
+                  <img src="<?= base_url('assets/file/frontend/image/recruitment/klarifikasi-rekrutmen-1.jpeg') ?>" alt="Klarifikasi resmi PT Jhonlin Agro Raya Tbk tentang modus penipuan rekrutmen dan tanda-tanda permintaan transfer, bagian 1 dari 2." width="1920" height="2560" decoding="async">
+                </a>
+              </div>
+            </div>
+            <div class="carousel-item" role="group" aria-roledescription="slide" aria-label="Poster 2 dari 2">
+              <div class="recruitment-notice-modal__slide">
+                <a href="<?= base_url('assets/file/frontend/image/recruitment/klarifikasi-rekrutmen-2.jpeg') ?>" target="_blank" rel="noopener noreferrer" aria-label="Buka poster klarifikasi rekrutmen bagian kedua ukuran penuh">
+                  <img src="<?= base_url('assets/file/frontend/image/recruitment/klarifikasi-rekrutmen-2.jpeg') ?>" alt="Imbauan untuk memverifikasi lowongan melalui kanal resmi PT Jhonlin Agro Raya Tbk dan kontak resmi perusahaan, bagian 2 dari 2." width="1920" height="2560" loading="lazy" decoding="async">
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <button class="carousel-control-prev" type="button" data-bs-target="#recruitment-notice-carousel" data-bs-slide="prev" aria-label="Poster sebelumnya">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#recruitment-notice-carousel" data-bs-slide="next" aria-label="Poster berikutnya">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  function showRecruitmentNotice() {
+    var modalElement = document.getElementById('recruitment-warning-modal');
+    if (!modalElement || !window.bootstrap || !window.bootstrap.Modal) return;
+    modalElement.addEventListener('shown.bs.modal', function () {
+      var backdrops = document.querySelectorAll('.modal-backdrop');
+      var backdrop = backdrops[backdrops.length - 1];
+      if (backdrop) backdrop.classList.add('recruitment-notice-backdrop');
+    });
+    window.bootstrap.Modal.getOrCreateInstance(modalElement).show();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', showRecruitmentNotice, { once: true });
+  } else {
+    showRecruitmentNotice();
+  }
+})();
+</script>

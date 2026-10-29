@@ -38,4 +38,15 @@ user_guide_src/cilexer/pycilexer.egg-info/*
 
 /application/cache/sessions/*
 /.env
-/assets/
+/docs/
+/assets/*
+!/assets/file/
+/assets/file/*
+!/assets/file/frontend/
+/assets/file/frontend/*
+!/assets/file/frontend/image/
+/assets/file/frontend/image/*
+!/assets/file/frontend/image/recruitment/
+/assets/file/frontend/image/recruitment/*
+!/assets/file/frontend/image/recruitment/klarifikasi-rekrutmen-1.jpeg
+!/assets/file/frontend/image/recruitment/klarifikasi-rekrutmen-2.jpeg

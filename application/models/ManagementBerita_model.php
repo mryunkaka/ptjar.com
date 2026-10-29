@@ -89,20 +89,30 @@ class ManagementBerita_model extends CI_Model
 	    a.vc_content,
 	    a.vc_author_name,
 	    a.vc_status,
-	    b.vc_image,
+	    (
+	        SELECT image.vc_image
+	        FROM tr_post_images image
+	        WHERE image.nu_post_id = a.nu_id
+	          AND image.dt_deleted IS NULL
+	        ORDER BY image.int_thumbnail DESC, image.nu_id DESC
+	        LIMIT 1
+	    ) AS vc_image,
 	    a.dt_published,
 	    a.vc_lang,
-	    c.vc_img as vc_lang_img
+	    (
+	        SELECT language.vc_img
+	        FROM conf_language language
+	        WHERE language.vc_code = a.vc_lang
+	        LIMIT 1
+	    ) AS vc_lang_img
         FROM
 	    tr_posts a
-	    LEFT JOIN tr_post_images b ON a.nu_id = b.nu_post_id
-	    LEFT JOIN conf_language c ON a.vc_lang = c.vc_code 
         WHERE
-	    a.vc_type = 'berita' and a.vc_lang=? and b.dt_deleted IS NULL
-        GROUP BY
-	    a.nu_id
+	    a.vc_type = 'berita' and a.vc_lang=? and a.dt_deleted IS NULL
         ORDER BY
-	    a.dt_published DESC,b.int_thumbnail DESC LIMIT ? OFFSET ? ", array($lang, (int) $per_page, (int) $awal));
+	    a.dt_published DESC,
+	    (SELECT MAX(image.int_thumbnail) FROM tr_post_images image WHERE image.nu_post_id = a.nu_id AND image.dt_deleted IS NULL) DESC
+	    LIMIT ? OFFSET ? ", array($lang, (int) $per_page, (int) $awal));
         return $hasil->result_array();
     }
     public function get_berita_list_recent($lang)
@@ -115,17 +125,21 @@ class ManagementBerita_model extends CI_Model
 	        a.vc_content,
 	        a.vc_author_name,
 	        a.vc_status,
-	        b.vc_image,
+	        (
+	            SELECT image.vc_image
+	            FROM tr_post_images image
+	            WHERE image.nu_post_id = a.nu_id
+	              AND image.dt_deleted IS NULL
+	            ORDER BY image.int_thumbnail DESC, image.nu_id DESC
+	            LIMIT 1
+	        ) AS vc_image,
 	        a.dt_published 
         FROM
 	        tr_posts a
-	        LEFT JOIN tr_post_images b ON a.nu_id = b.nu_post_id 
         WHERE
-	        a.vc_type = 'berita' and a.vc_lang=? and b.dt_deleted IS NULL
-	        GROUP BY
-	        a.nu_id
+	        a.vc_type = 'berita' and a.vc_lang=? and a.dt_deleted IS NULL
         ORDER BY
-	a.dt_published DESC,b.int_thumbnail DESC LIMIT 4", array($lang));
+	a.dt_published DESC LIMIT 4", array($lang));
         return $hasil->result_array();
     }
 
