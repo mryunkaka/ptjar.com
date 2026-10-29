@@ -1,5 +1,11 @@
 RewriteEngine On
 
+# Prevent Apache/LiteSpeed from listing directory contents.
+Options -Indexes
+
+# Block common script extensions in the public frontend image directory.
+RewriteRule ^assets/file/frontend/image/.*\.(?:php[0-9]*|phtml|phar|cgi|pl|py|sh)(?:[/.]|$) - [F,L,NC]
+
 # Send every request over HTTPS and use the canonical site host.
 RewriteCond %{HTTP_HOST} !^(localhost|127\.0\.0\.1)(:[0-9]+)?$ [NC]
 RewriteCond %{HTTPS} !^(on|1)$ [NC,OR]
