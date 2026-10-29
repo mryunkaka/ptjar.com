@@ -61,12 +61,12 @@
                         </button>
                     </div>
 
-                    <h2 class="title"> <?= $detail[0]['vc_title'] ?></h2>
+                    <h2 class="title"> <?= html_escape($detail[0]['vc_title']) ?></h2>
 
                     <div class="meta-top">
                         <div class="row mb-4">
                             <div class="col-sm-2">
-                                <li class="d-flex align-items-center"><i class="bi bi-person"></i><?= $detail[0]['vc_author_name'] ?></li>
+                                <li class="d-flex align-items-center"><i class="bi bi-person"></i><?= html_escape($detail[0]['vc_author_name']) ?></li>
                             </div>
                             <div class="col-sm-2">
                                 <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <time datetime="2020-03-01"><?= date("d-M-Y", strtotime($detail[0]['dt_published'])) ?></time></li>
@@ -76,7 +76,7 @@
                     </div><!-- End meta top -->
 
                     <div class="content">
-                        <?= $detail[0]['vc_content'] ?>
+                        <?= $this->security->xss_clean($detail[0]['vc_content']) ?>
                     </div><!-- End post content -->
 
             </div>

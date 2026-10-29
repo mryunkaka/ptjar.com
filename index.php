@@ -53,7 +53,13 @@
  *
  * NOTE: If you change these, also change the error_reporting() code below
  */
-	define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : 'development');
+$httpHost = isset($_SERVER['HTTP_HOST']) ? strtolower((string) $_SERVER['HTTP_HOST']) : '';
+$httpHost = preg_replace('/:\\d+$/', '', $httpHost);
+$remoteAddress = isset($_SERVER['REMOTE_ADDR']) ? (string) $_SERVER['REMOTE_ADDR'] : '';
+$isLocalDevelopment = in_array($httpHost, array('localhost', '127.0.0.1', '::1'), TRUE)
+	&& in_array($remoteAddress, array('127.0.0.1', '::1'), TRUE);
+$defaultEnvironment = $isLocalDevelopment ? 'development' : 'production';
+define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : $defaultEnvironment);
 
 /*
  *---------------------------------------------------------------

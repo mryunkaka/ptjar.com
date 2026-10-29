@@ -19,6 +19,7 @@
                 </div>
 
                 <form class="row g-3 needs-validation" method="post" action="<?= base_url('auth'); ?>" novalidate>
+                    <input type="hidden" name="<?= html_escape($this->security->get_csrf_token_name()); ?>" value="<?= html_escape($this->security->get_csrf_hash()); ?>">
 
                     <div class="col-12">
                         <label for="yourUsername" class="form-label">Username</label>

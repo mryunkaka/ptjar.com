@@ -42,8 +42,8 @@
                                              <td><img src="<?= base_url() . $url[0]['vc_url'] . $sm['vc_image'] ?> " class="img-thumbnail" width="120" alt="..."></td>
                                          <?php } ?>
                                          </php>
-                                         <td><?= $sm['vc_title']; ?></td>
-                                         <td><?= word_limiter($sm['vc_content'], 20); ?></td>
+                                         <td><?= html_escape($sm['vc_title']); ?></td>
+                                         <td><?= html_escape(word_limiter(strip_tags($sm['vc_content']), 20)); ?></td>
                                          <td>
                                              <?php if ($sm['vc_status'] == 0) { ?>
                                                  <span class="badge rounded-pill bg-warning text-dark">Draft</span>

@@ -1,19 +1,51 @@
-RewriteEngine On 
-RewriteCond %{HTTP_HOST} ^myhost\.com$ [NC] 
-RewriteRule ^(.*)$ myhost.com/$1 [R=301,L] 
-RewriteCond %{THE_REQUEST} ^[A-Z]+\ /index\.php(/[^\ ]*)?\ HTTP/ 
-RewriteRule ^index\.php(/(.*))?$ myhost.com/$2 [R=301,L] 
+RewriteEngine On
+
+# Send every request over HTTPS and use the canonical site host.
+RewriteCond %{HTTP_HOST} !^(localhost|127\.0\.0\.1)(:[0-9]+)?$ [NC]
+RewriteCond %{HTTPS} !^(on|1)$ [NC,OR]
+RewriteCond %{HTTP_HOST} !^ptjar\.com$ [NC]
+RewriteRule ^ https://ptjar.com%{REQUEST_URI} [R=301,L,NE]
+
+# Compress text responses; JPEG, PNG, and WebP already use compressed formats.
+<IfModule mod_filter.c>
+  <IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/css text/xml text/javascript application/javascript application/json application/xml image/svg+xml
+  </IfModule>
+</IfModule>
+
+# Do not publish framework/dependency documentation or Composer metadata.
+RewriteRule ^(?:composer\.(?:json|lock)|user_guide(?:/|$)) - [F,L,NC]
+
+# Serve pre-generated WebP sidecars to compatible browsers, with the source
+# JPEG/PNG still available as a fallback for browsers that do not support WebP.
+RewriteCond %{HTTP_ACCEPT} image/webp [NC]
+RewriteCond %{REQUEST_FILENAME}.webp -f
+RewriteRule ^(.+\.(?:jpe?g|png))$ $1.webp [T=image/webp,L,NC]
+RewriteCond %{THE_REQUEST} \s/+index\.php(?:[/?\s]) [NC]
+RewriteRule ^index\.php/?(.*)$ /$1 [R=301,L,NE]
 RewriteCond %{REQUEST_FILENAME} !-f 
 RewriteCond %{REQUEST_FILENAME} !-d 
 RewriteRule ^(.*)$ index.php/$1 [L] 
 
-# Add Font Types
+# Add Font and WebP Types
 AddType application/vnd.ms-fontobject .eot
 AddType font/truetype .ttf
 AddType font/opentype .otf
 AddType font/opentype .woff
 AddType font/opentype .woff2
 AddType image/svg+xml .svg .svgz
+AddType image/webp .webp
+
+<IfModule mod_headers.c>
+  Header always set Strict-Transport-Security "max-age=31536000"
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "camera=(), geolocation=(), microphone=()"
+  <FilesMatch "\.(jpe?g|png|webp)$">
+    Header merge Vary Accept
+  </FilesMatch>
+</IfModule>
 
 <FilesMatch ".(eot|ttf|otf|woff|woff2|svg|svgz)">
 Header set Access-Control-Allow-Origin "*"

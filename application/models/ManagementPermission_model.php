@@ -12,13 +12,23 @@ class ManagementPermission_model extends CI_Model
 	    mst_role a
 	    LEFT JOIN tr_role_menu b ON a.vc_code_role = b.vc_id_role
 	    LEFT JOIN mst_menu c ON b.vc_id_menu = c.nu_id
-	    GROUP BY a.vc_code_role");
+	    GROUP BY a.vc_code_role, a.vc_role_name");
         return $hasil->result_array();
     }
     public function get_user_detail()
     {
         $id = $this->input->post('id', TRUE);
-        $hasil = $this->db->query("SELECT nu_id,vc_username,vc_name,vc_role_name,is_active FROM msv_user_akses where nu_id=?", array($id));
+        $hasil = $this->db->query("SELECT
+            user_account.nu_id,
+            user_account.vc_username,
+            user_account.vc_name,
+            role.vc_role_name,
+            user_account.is_active
+        FROM mst_user AS user_account
+        LEFT JOIN tr_role AS user_role ON user_account.nu_id = user_role.vc_user
+        LEFT JOIN mst_role AS role ON user_role.vc_role_id = role.vc_code_role
+        WHERE user_account.nu_id = ?
+        LIMIT 1", array($id));
         return $hasil->result_array();
     }
 

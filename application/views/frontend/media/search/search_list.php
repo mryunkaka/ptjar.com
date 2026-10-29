@@ -39,12 +39,12 @@
 
 
                     <h2 class="title">
-                      <a href="<?= base_url('') ?>Berita/<?= $sm["uuid"] ?>"><?= $sm["vc_title"] ?></a>
+                      <a href="<?= html_escape(base_url('Berita/' . rawurlencode((string) $sm['uuid']))) ?>"><?= html_escape($sm['vc_title']) ?></a>
                     </h2>
 
                     <div class="meta-top">
                       <ul>
-                        <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-details.html"><?= $sm["vc_author_name"] ?></a></li>
+                        <li class="d-flex align-items-center"><i class="bi bi-person"></i> <span><?= html_escape($sm['vc_author_name']) ?></span></li>
                         <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-details.html"><time datetime="2022-03-01"><?= date('d-M-Y', strtotime($sm['dt_published'])); ?></time></a></li>
 
                       </ul>
@@ -52,7 +52,7 @@
 
                     <div class="content">
                       <p>
-                        <?= word_limiter($sm["vc_content"], 20) ?> </p>
+                        <?= html_escape(word_limiter(strip_tags($sm['vc_content']), 20)) ?> </p>
 
                     </div>
 
@@ -109,10 +109,10 @@
                         <?php if (empty($sm['vc_image'])) { ?>
                           <td><img src="<?= base_url() . 'assets/file/backend/upload/berita/thumbnail/default/default.png' ?> " class="img-fluid" alt="..."></td>
                         <?php } else { ?>
-                          <img src="<?= base_url() . $url[0]['vc_url'] . $sm['vc_image'] ?> " alt="" class="flex-shrink-0">
+                        <?= webp_picture_tag(base_url() . $url[0]['vc_url'] . $sm['vc_image'], '', array('class' => 'flex-shrink-0', 'loading' => 'lazy', 'decoding' => 'async')) ?>
                         <?php } ?>
                         <div>
-                          <h4><a href="<?= base_url('') ?>Berita/<?= $sm["uuid"] ?>"><?= $sm["vc_title"] ?></a></h4>
+                          <h4><a href="<?= html_escape(base_url('Berita/' . rawurlencode((string) $sm['uuid']))) ?>"><?= html_escape($sm['vc_title']) ?></a></h4>
                           <time datetime=" 2020-01-01"><?= date('d-M-Y', strtotime($sm['dt_published'])); ?></time>
                         </div>
                       </div>

@@ -24,6 +24,45 @@ function periksa_login()
             $ci->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">User Anda Sedang Digunakan. Silahkan Login Kembali!</div>');
             redirect('auth');
         }
+
+        // The sidebar hides pages outside a role's menu, but hiding links alone
+        // does not protect direct requests to their controller URLs.
+        $controller = strtolower((string) $ci->router->fetch_class());
+        if ($controller !== 'dashboard' && $controller !== 'user') {
+            $roleId = (int) $ci->session->userdata('role');
+            if ($roleId <= 0) {
+                show_error('Anda tidak memiliki izin untuk mengakses halaman ini.', 403, 'Akses Ditolak');
+            }
+
+            $menuRoutes = $ci->db->query(
+                'SELECT DISTINCT `mst_sub_menu`.`vc_url`
+                 FROM `tr_role_menu`
+                 INNER JOIN `mst_menu`
+                    ON `tr_role_menu`.`vc_id_menu` = `mst_menu`.`nu_id`
+                 INNER JOIN `mst_sub_menu`
+                    ON `mst_sub_menu`.`vc_id_menu` = `mst_menu`.`nu_id`
+                 WHERE `tr_role_menu`.`vc_id_role` = ?
+                   AND `mst_sub_menu`.`is_active` = 1',
+                array($roleId)
+            )->result_array();
+
+            $allowedControllers = array();
+            foreach ($menuRoutes as $menuRoute) {
+                $path = parse_url((string) $menuRoute['vc_url'], PHP_URL_PATH);
+                $segments = explode('/', trim((string) $path, '/'));
+                while (isset($segments[0]) && strtolower($segments[0]) === 'index.php') {
+                    array_shift($segments);
+                }
+                if (!empty($segments[0])) {
+                    $allowedControllers[] = strtolower($segments[0]);
+                }
+            }
+
+            if (!in_array($controller, $allowedControllers, TRUE)) {
+                show_error('Anda tidak memiliki izin untuk mengakses halaman ini.', 403, 'Akses Ditolak');
+            }
+        }
+
         // elseif ($timenow > $expired['dt_expired']) {
         //     $ci->db->delete('tmp_login', array('vc_user_id' => $id));
         //     $array_items = array('id', 'username', 'name', 'role', 'key');

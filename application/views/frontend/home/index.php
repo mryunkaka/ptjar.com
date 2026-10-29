@@ -161,7 +161,7 @@
         <div class="carousel-item active">
 
           <div class="row justify-content-center gy-6">
-            <img src="<?= base_url('') ?>assets/file/frontend/image/home/home1.jpg" alt="" class="img-fluid img carousel-img-alif">
+            <?= webp_picture_tag(base_url('assets/file/frontend/image/home/home1.jpg'), '', array('class' => 'img-fluid img carousel-img-alif', 'fetchpriority' => 'high', 'decoding' => 'async')) ?>
             <div class="col-lg-9 text-center">
 
               <h2 class="color-secondary-light">"Towards Sustainable Resources"</h2>
@@ -175,7 +175,7 @@
         <div class="carousel-item ">
 
           <div class="row justify-content-center gy-6">
-            <img src="<?= base_url('') ?>assets/file/frontend/image/home/home2.jpg" alt="" class="img-fluid img carousel-img-alif">
+            <?= webp_picture_tag(base_url('assets/file/frontend/image/home/home2.jpg'), '', array('class' => 'img-fluid img carousel-img-alif', 'loading' => 'lazy', 'decoding' => 'async')) ?>
             <div class="col-lg-9 text-center">
 
               <h2 class="color-secondary-light">“Maju, Tumbuh dan Berkembang, Bersama Kita Bisa”</h2>
@@ -189,7 +189,7 @@
         <div class="carousel-item">
 
           <div class="row justify-content-center gy-6">
-            <img src="<?= base_url('') ?>assets/file/frontend/image/home/home3.jpg" alt="" class="img-fluid img carousel-img-alif">
+            <?= webp_picture_tag(base_url('assets/file/frontend/image/home/home3.jpg'), '', array('class' => 'img-fluid img carousel-img-alif', 'loading' => 'lazy', 'decoding' => 'async')) ?>
             <div class="col-lg-9 text-center">
 
               <h2 class="color-secondary-light">“Integritas, Konsisten, Berpikir Besar”</h2>
@@ -257,7 +257,7 @@
 
         <div class="col-lg-5">
           <div class="about-img">
-            <img src="<?= base_url('') ?>assets/file/frontend/image/visimisi/sawit_visimisi.jpg" class="img-fluid" alt="">
+            <?= webp_picture_tag(base_url('assets/file/frontend/image/visimisi/sawit_visimisi.jpg'), '', array('class' => 'img-fluid', 'loading' => 'lazy', 'decoding' => 'async')) ?>
           </div>
         </div>
 
@@ -311,7 +311,7 @@
         <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
           <div class="service-item">
             <div class="img">
-              <img src="<?= base_url('') ?>assets/file/frontend/image/layanan/cpo.JPG" class="img-fluid" alt="">
+              <?= webp_picture_tag(base_url('assets/file/frontend/image/layanan/cpo.JPG'), '', array('class' => 'img-fluid', 'loading' => 'lazy', 'decoding' => 'async')) ?>
             </div>
             <div class="details position-relative" style="height:350px">
               <div class="icon">
@@ -328,7 +328,7 @@
         <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
           <div class="service-item">
             <div class="img">
-              <img src="<?= base_url('') ?>assets/file/frontend/image/layanan/fame.JPG" class="img-fluid" alt="">
+              <?= webp_picture_tag(base_url('assets/file/frontend/image/layanan/fame.JPG'), '', array('class' => 'img-fluid', 'loading' => 'lazy', 'decoding' => 'async')) ?>
             </div>
             <div class="details position-relative" style="height:350px">
               <div class="icon">
@@ -345,7 +345,7 @@
         <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
           <div class="service-item">
             <div class="img">
-              <img src="<?= base_url('') ?>assets/file/frontend/image/layanan/RBDPO.jpg" class="img-fluid" alt="">
+              <?= webp_picture_tag(base_url('assets/file/frontend/image/layanan/RBDPO.jpg'), '', array('class' => 'img-fluid', 'loading' => 'lazy', 'decoding' => 'async')) ?>
             </div>
             <div class="details position-relative " style="height:350px">
               <div class="icon">
@@ -366,7 +366,7 @@
         <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
           <div class="service-item">
             <div class="img">
-              <img src="<?= base_url('') ?>assets/file/frontend/image/layanan/pfad.jpg" class="img-fluid" alt="">
+              <?= webp_picture_tag(base_url('assets/file/frontend/image/layanan/pfad.jpg'), '', array('class' => 'img-fluid', 'loading' => 'lazy', 'decoding' => 'async')) ?>
             </div>
             <div class="details position-relative" style="height:350px">
               <div class="icon">
@@ -383,7 +383,7 @@
         <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
           <div class="service-item">
             <div class="img">
-              <img src="<?= base_url('') ?>assets/file/frontend/image/layanan/Glycerin.jpg" class="img-fluid" alt="">
+              <?= webp_picture_tag(base_url('assets/file/frontend/image/layanan/Glycerin.jpg'), '', array('class' => 'img-fluid', 'loading' => 'lazy', 'decoding' => 'async')) ?>
             </div>
             <div class="details position-relative" style="height:350px">
               <div class="icon">
@@ -400,7 +400,7 @@
         <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
           <div class="service-item">
             <div class="img">
-              <img src="<?= base_url('') ?>assets/file/frontend/image/layanan/fatty meter.jpg" class="img-fluid" alt="">
+              <?= webp_picture_tag(base_url('assets/file/frontend/image/layanan/fatty meter.jpg'), '', array('class' => 'img-fluid', 'loading' => 'lazy', 'decoding' => 'async')) ?>
             </div>
             <div class="details position-relative" style="height:350px">
               <div class="icon">
@@ -435,14 +435,14 @@
             <div class="carousel-item active" role="group" aria-roledescription="slide" aria-label="Poster 1 dari 2">
               <div class="recruitment-notice-modal__slide">
                 <a href="<?= base_url('assets/file/frontend/image/recruitment/klarifikasi-rekrutmen-1.jpeg') ?>" target="_blank" rel="noopener noreferrer" aria-label="Buka poster klarifikasi rekrutmen bagian pertama ukuran penuh">
-                  <img src="<?= base_url('assets/file/frontend/image/recruitment/klarifikasi-rekrutmen-1.jpeg') ?>" alt="Klarifikasi resmi PT Jhonlin Agro Raya Tbk tentang modus penipuan rekrutmen dan tanda-tanda permintaan transfer, bagian 1 dari 2." width="1920" height="2560" decoding="async">
+                  <?= webp_picture_tag(base_url('assets/file/frontend/image/recruitment/klarifikasi-rekrutmen-1.jpeg'), 'Klarifikasi resmi PT Jhonlin Agro Raya Tbk tentang modus penipuan rekrutmen dan tanda-tanda permintaan transfer, bagian 1 dari 2.', array('width' => '1920', 'height' => '2560', 'decoding' => 'async')) ?>
                 </a>
               </div>
             </div>
             <div class="carousel-item" role="group" aria-roledescription="slide" aria-label="Poster 2 dari 2">
               <div class="recruitment-notice-modal__slide">
                 <a href="<?= base_url('assets/file/frontend/image/recruitment/klarifikasi-rekrutmen-2.jpeg') ?>" target="_blank" rel="noopener noreferrer" aria-label="Buka poster klarifikasi rekrutmen bagian kedua ukuran penuh">
-                  <img src="<?= base_url('assets/file/frontend/image/recruitment/klarifikasi-rekrutmen-2.jpeg') ?>" alt="Imbauan untuk memverifikasi lowongan melalui kanal resmi PT Jhonlin Agro Raya Tbk dan kontak resmi perusahaan, bagian 2 dari 2." width="1920" height="2560" loading="lazy" decoding="async">
+                  <?= webp_picture_tag(base_url('assets/file/frontend/image/recruitment/klarifikasi-rekrutmen-2.jpeg'), 'Imbauan untuk memverifikasi lowongan melalui kanal resmi PT Jhonlin Agro Raya Tbk dan kontak resmi perusahaan, bagian 2 dari 2.', array('width' => '1920', 'height' => '2560', 'loading' => 'lazy', 'decoding' => 'async')) ?>
                 </a>
               </div>
             </div>

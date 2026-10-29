@@ -54,7 +54,21 @@ class Auth extends CI_Controller
 		$password = $this->input->post('password', TRUE);
 
 		$user = $this->db->get_where('mst_user', ['vc_username' => $username])->row_array();
-		$akses = $this->db->get_where('msv_user_akses', ['vc_username' => $username])->row_array();
+		$akses = NULL;
+		if ($user) {
+			// Query the role tables directly. The local copy of msv_user_akses can
+			// have a hosting-only DEFINER, which makes that view fail on localhost.
+			$akses = $this->db->query(
+				' SELECT user_role.vc_role_id, role.is_approve, role.is_entry,
+				        role.is_update, role.is_view
+				  FROM mst_user AS user_account
+				  LEFT JOIN tr_role AS user_role ON user_account.nu_id = user_role.vc_user
+				  LEFT JOIN mst_role AS role ON user_role.vc_role_id = role.vc_code_role
+				  WHERE user_account.nu_id = ?
+				  LIMIT 1',
+				array($user['nu_id'])
+			)->row_array();
+		}
 
 
 

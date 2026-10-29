@@ -40,6 +40,9 @@ user_guide_src/cilexer/pycilexer.egg-info/*
 /.env
 /docs/
 /assets/*
+/assets/**/*
+!/assets/**/
+!/assets/**/*.webp
 !/assets/file/
 /assets/file/*
 !/assets/file/frontend/
@@ -50,3 +53,8 @@ user_guide_src/cilexer/pycilexer.egg-info/*
 /assets/file/frontend/image/recruitment/*
 !/assets/file/frontend/image/recruitment/klarifikasi-rekrutmen-1.jpeg
 !/assets/file/frontend/image/recruitment/klarifikasi-rekrutmen-2.jpeg
+!/assets/file/frontend/image/**/
+!/assets/file/frontend/image/**/*.webp
+!/assets/file/backend/
+!/assets/file/backend/**/
+!/assets/file/backend/**/*.webp

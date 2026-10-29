@@ -15,13 +15,11 @@ class ManagementInformasiKeuangan_model extends CI_Model
     public function count_laporan()
     {
         $hasil = $this->db->query("SELECT
-	    count(vc_group_seq) as cnt
+	    COUNT(DISTINCT vc_group_seq) as cnt
         FROM
 	    tr_informasi 
-         WHERE
-	    dt_deleted IS NULL  and vc_group='keuangan'
-     GROUP BY
-	    vc_group_seq");
+	 WHERE
+	    dt_deleted IS NULL  and vc_group='keuangan'");
         return $hasil->result_array();
     }
     public function get_laporan()
@@ -40,7 +38,7 @@ class ManagementInformasiKeuangan_model extends CI_Model
     public function get_laporan_list($per_page, $awal)
     {
         $hasil = $this->db->query("SELECT
-	    vc_tahun,
+	    MAX(vc_tahun) AS vc_tahun,
 	    vc_group_seq 
         FROM
 	    tr_informasi 

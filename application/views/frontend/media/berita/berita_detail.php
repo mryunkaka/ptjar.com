@@ -18,14 +18,14 @@
 
                     <div class="carousel-item active">
                       <div class="row justify-content-center gy-6">
-                        <img src="<?= base_url('') . $url[0]['vc_url'] . $sm['vc_image'] ?>" alt="" class="img-fluid img carousel-img-alif">
+                        <?= webp_picture_tag(base_url() . $url[0]['vc_url'] . $sm['vc_image'], '', array('class' => 'img-fluid img carousel-img-alif', 'fetchpriority' => 'high', 'decoding' => 'async')) ?>
 
                       </div>
                     </div>
                   <?php } else { ?>
                     <div class="carousel-item">
                       <div class="row justify-content-center gy-6">
-                        <img src="<?= base_url('') . $url[0]['vc_url'] . $sm['vc_image'] ?>" alt="" class="img-fluid img carousel-img-alif">
+                        <?= webp_picture_tag(base_url() . $url[0]['vc_url'] . $sm['vc_image'], '', array('class' => 'img-fluid img carousel-img-alif', 'loading' => 'lazy', 'decoding' => 'async')) ?>
 
                       </div>
                     </div>
@@ -44,11 +44,11 @@
             </div>
 
 
-            <h2 class="title"><?= $detail[0]['vc_title'] ?></h2>
+            <h2 class="title"><?= html_escape($detail[0]['vc_title']) ?></h2>
 
             <div class="meta-top">
               <ul>
-                <li class="d-flex align-items-center"><i class="bi bi-person"></i> <?= $detail[0]['vc_author_name'] ?></li>
+                <li class="d-flex align-items-center"><i class="bi bi-person"></i> <?= html_escape($detail[0]['vc_author_name']) ?></li>
                 <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <time datetime="2020-03-01"><?= date("d-M-Y", strtotime($detail[0]['dt_published'])) ?></time></li>
 
               </ul>
@@ -57,7 +57,7 @@
             <div class="content">
 
 
-              <?= $detail[0]['vc_content'] ?>
+              <?= $this->security->xss_clean($detail[0]['vc_content']) ?>
 
 
             </div><!-- End post content -->
@@ -110,9 +110,9 @@
                     $i = 1; ?>
                     <?php foreach ($list_recent as $sm) : ?>
                       <div class="post-item mt-3">
-                        <img src="<?= base_url() . $url[0]['vc_url'] . $sm['vc_image'] ?> " alt="" class="flex-shrink-0">
+                        <?= webp_picture_tag(base_url() . $url[0]['vc_url'] . $sm['vc_image'], '', array('class' => 'flex-shrink-0', 'loading' => 'lazy', 'decoding' => 'async')) ?>
                         <div>
-                          <h4><a href="<?= base_url('') ?>Berita/<?= $sm["uuid"] ?>"><?= $sm["vc_title"] ?></a></h4>
+                          <h4><a href="<?= html_escape(base_url('Berita/' . rawurlencode((string) $sm['uuid']))) ?>"><?= html_escape($sm['vc_title']) ?></a></h4>
                           <time datetime=" 2020-01-01"><?= date('d-M-Y', strtotime($sm['dt_published'])); ?></time>
                         </div>
                       </div>

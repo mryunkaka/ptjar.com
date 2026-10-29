@@ -4,13 +4,34 @@ class ManagementUser_model extends CI_Model
 {
     public function get_user_list()
     {
-        $hasil = $this->db->query("SELECT  nu_id,vc_username,vc_name,vc_role_name,is_active,vc_role_id FROM msv_user_akses ORDER BY nu_id desc");
+        $hasil = $this->db->query("SELECT
+            user_account.nu_id,
+            user_account.vc_username,
+            user_account.vc_name,
+            role.vc_role_name,
+            user_account.is_active,
+            user_role.vc_role_id
+        FROM mst_user AS user_account
+        LEFT JOIN tr_role AS user_role ON user_account.nu_id = user_role.vc_user
+        LEFT JOIN mst_role AS role ON user_role.vc_role_id = role.vc_code_role
+        ORDER BY user_account.nu_id DESC");
         return $hasil->result_array();
     }
     public function get_user_detail()
     {
         $id = $this->input->post('id', TRUE);
-        $hasil = $this->db->query("SELECT nu_id,vc_username,vc_name,vc_role_name,is_active FROM msv_user_akses where nu_id=?", array($id));
+        $hasil = $this->db->query("SELECT
+            user_account.nu_id,
+            user_account.vc_username,
+            user_account.vc_name,
+            role.vc_role_name,
+            user_account.is_active,
+            user_role.vc_role_id
+        FROM mst_user AS user_account
+        LEFT JOIN tr_role AS user_role ON user_account.nu_id = user_role.vc_user
+        LEFT JOIN mst_role AS role ON user_role.vc_role_id = role.vc_code_role
+        WHERE user_account.nu_id = ?
+        LIMIT 1", array($id));
         return $hasil->result_array();
     }
 
@@ -99,7 +120,7 @@ class ManagementUser_model extends CI_Model
         $role = $this->input->post('role', TRUE);
         $sts = $this->input->post('status', TRUE);
         $this->db->trans_start();
-        if ($password == ' ' || $password == null) {
+        if (trim((string) $password) === '') {
             $data = array(
                 'is_active' => $sts
             );

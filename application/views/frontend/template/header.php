@@ -10,9 +10,6 @@
   <meta content="" name="description">
   <meta content="" name="keywords">
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-
   <!-- Favicons -->
   <link href="<?= base_url() ?>favicon.png?v=2" rel="icon" type="image/png">
   <!-- <link href="<?= base_url('assets/HeroBiz-pro') ?>/assets/img/favicon.png" rel="icon"> -->

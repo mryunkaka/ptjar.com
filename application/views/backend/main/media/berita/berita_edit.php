@@ -126,7 +126,7 @@
                 <div class="row">
                     <div class="col-md-3">
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="berita_author" name="berita_author" value="<?= $detail[0]['vc_author_name'] ?>">
+                            <input type="text" class="form-control" id="berita_author" name="berita_author" value="<?= html_escape($detail[0]['vc_author_name']) ?>">
                             <label for="floatingName">Author</label>
                         </div>
                     </div>
@@ -138,7 +138,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="berita_title" name="berita_title" value="<?= $detail[0]['vc_title'] ?>">
+                            <input type="text" class="form-control" id="berita_title" name="berita_title" value="<?= html_escape($detail[0]['vc_title']) ?>">
                             <label for="floatingName">Berita Title</label>
                         </div>
                     </div>
@@ -151,7 +151,7 @@
                     <div class="col-md-12 mb-3">
                         <h5>Content</h5>
 
-                        <textarea class="tinymce-editor" id="content_berita" name="content_berita" style="height: 100px;">  <?= $detail[0]['vc_content'] ?></textarea>
+                        <textarea class="tinymce-editor" id="content_berita" name="content_berita" style="height: 100px;">  <?= html_escape($detail[0]['vc_content']) ?></textarea>
 
 
                     </div>
