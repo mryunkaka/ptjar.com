@@ -6,11 +6,15 @@ Options -Indexes
 # Block common script extensions in the public frontend image directory.
 RewriteRule ^assets/file/frontend/image/.*\.(?:php[0-9]*|phtml|phar|cgi|pl|py|sh)(?:[/.]|$) - [F,L,NC]
 
-# Send every request over HTTPS and use the canonical site host.
+# Keep each approved domain in the address bar and use HTTPS on that same host.
+RewriteCond %{HTTP_HOST} ^(?:www\.)?ptjar\.(?:com|co\.id)$ [NC]
+RewriteCond %{HTTPS} !^(on|1)$ [NC]
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L,NE]
+
+# Reject unknown public Host headers instead of redirecting them to another host.
 RewriteCond %{HTTP_HOST} !^(localhost|127\.0\.0\.1)(:[0-9]+)?$ [NC]
-RewriteCond %{HTTPS} !^(on|1)$ [NC,OR]
-RewriteCond %{HTTP_HOST} !^ptjar\.com$ [NC]
-RewriteRule ^ https://ptjar.com%{REQUEST_URI} [R=301,L,NE]
+RewriteCond %{HTTP_HOST} !^(?:www\.)?ptjar\.(?:com|co\.id)$ [NC]
+RewriteRule ^ - [F,L]
 
 # Compress text responses; JPEG, PNG, and WebP already use compressed formats.
 <IfModule mod_filter.c>
