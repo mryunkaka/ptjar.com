@@ -10,6 +10,7 @@ class Management_Berita extends CI_Controller
         parent::__construct();
 
         $this->load->model('ManagementBerita_model');
+        $this->load->model('Jhonlinmagz_import_model');
         $this->load->helper('form');
         $this->load->helper('url');
         $this->load->helper('global');
@@ -27,6 +28,8 @@ class Management_Berita extends CI_Controller
         // $data['list'] = $this->ManagementBerita_model->get_berita_list();
         $data['url'] = $this->ManagementBerita_model->get_conf_url_t();
         $data['cnt'] = $this->ManagementBerita_model->count_berita_all();
+        $data['category'] = $this->ManagementBerita_model->get_category();
+        $data['language'] = $this->ManagementBerita_model->get_language();
 
 
 
@@ -154,6 +157,43 @@ class Management_Berita extends CI_Controller
     {
         $this->ManagementBerita_model->update_berita();
     }
+
+    public function publish_berita()
+    {
+        if ($this->input->method(TRUE) !== 'POST') {
+            show_error('Metode permintaan tidak diizinkan.', 405);
+        }
+
+        $uuid = trim((string) $this->input->post('uuid', TRUE));
+        $published = $this->ManagementBerita_model->publish_draft($uuid);
+        if ($published) {
+            $message = '<div class="alert alert-success alert-dismissible fade show" role="alert">Berita berhasil diposting.<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
+        } else {
+            $message = '<div class="alert alert-warning alert-dismissible fade show" role="alert">Draft tidak ditemukan atau sudah diposting.<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
+        }
+
+        $this->session->set_flashdata('msg', $message);
+        redirect('Management_Berita');
+    }
+
+    public function unpublish_berita()
+    {
+        if ($this->input->method(TRUE) !== 'POST') {
+            show_error('Metode permintaan tidak diizinkan.', 405);
+        }
+
+        $uuid = trim((string) $this->input->post('uuid', TRUE));
+        $unpublished = $this->ManagementBerita_model->unpublish_post($uuid);
+        if ($unpublished) {
+            $message = '<div class="alert alert-success alert-dismissible fade show" role="alert">Berita berhasil ditarik dari publik dan dikembalikan menjadi Draft.<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
+        } else {
+            $message = '<div class="alert alert-warning alert-dismissible fade show" role="alert">Berita terbit tidak ditemukan atau sudah menjadi Draft.<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
+        }
+
+        $this->session->set_flashdata('msg', $message);
+        redirect('Management_Berita');
+    }
+
     public function get_berita()
     {
         $this->ManagementBerita_model->get_berita();
@@ -165,5 +205,44 @@ class Management_Berita extends CI_Controller
     public function delete_berita_preview()
     {
         $this->ManagementBerita_model->delete_berita_preview();
+    }
+
+    public function import_from_jhonlinmagz()
+    {
+        if ($this->input->method(TRUE) !== 'POST') {
+            show_error('Metode permintaan tidak diizinkan.', 405);
+        }
+
+        $categoryId = (int) $this->input->post('category', TRUE);
+        $language = trim((string) $this->input->post('bahasa', TRUE));
+        try {
+            $result = $this->Jhonlinmagz_import_model->import_recent($categoryId, $language);
+        } catch (Throwable $error) {
+            log_message('error', 'Jhonlin Magazine import request failed: ' . $error->getMessage());
+            $result = array('ok' => FALSE, 'error' => 'Terjadi kesalahan saat mengimpor berita. Periksa log aplikasi.');
+        }
+
+        if (empty($result['ok'])) {
+            $message = '<strong>Impor berita gagal.</strong> ' . html_escape($result['error']);
+            $class = 'danger';
+        } else {
+            $message = '<strong>Impor selesai.</strong> ' .
+                (int) $result['imported'] . ' draft baru, ' .
+                (int) $result['duplicates'] . ' berita dilewati karena sudah pernah diimpor, dan ' .
+                (int) $result['failed'] . ' berita gagal diproses.';
+            $class = $result['failed'] > 0 ? 'warning' : 'success';
+            if (!empty($result['errors'])) {
+                $message .= '<br>' . html_escape(implode(' ', array_slice($result['errors'], 0, 3)));
+            }
+        }
+
+        $this->session->set_flashdata(
+            'msg',
+            '<div class="alert alert-' . $class . ' alert-dismissible fade show" role="alert">' .
+                $message .
+                '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>' .
+            '</div>'
+        );
+        redirect('Management_Berita');
     }
 }

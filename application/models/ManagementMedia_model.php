@@ -30,7 +30,7 @@ class ManagementMedia_model extends CI_Model
     public function count_media($lang, $search)
     {
 
-        $hasil = $this->db->query("SELECT COUNT(nu_id) as cnt  FROM tr_posts WHERE vc_title LIKE ? and vc_lang=? ", array('%' . $search . '%', $lang));
+        $hasil = $this->db->query("SELECT COUNT(nu_id) as cnt FROM tr_posts WHERE vc_title LIKE ? AND vc_lang=? AND vc_status=1 AND dt_deleted IS NULL", array('%' . $search . '%', $lang));
         return $hasil->result_array();
     }
 
@@ -64,7 +64,7 @@ class ManagementMedia_model extends CI_Model
         FROM
 	tr_posts a
     WHERE
-	a.vc_title LIKE ?  and a.vc_lang=?
+	a.vc_title LIKE ? AND a.vc_lang=? AND a.vc_status=1 AND a.dt_deleted IS NULL
         ORDER BY
 	a.dt_published DESC,
 	(SELECT MAX(image.int_thumbnail) FROM tr_post_images image WHERE image.nu_post_id = a.nu_id AND image.dt_deleted IS NULL) DESC
@@ -93,7 +93,7 @@ class ManagementMedia_model extends CI_Model
         FROM
 	        tr_posts a
         WHERE
-	      a.vc_lang=?
+	      a.vc_lang=? AND a.vc_status=1 AND a.dt_deleted IS NULL
         ORDER BY
 	a.dt_published DESC LIMIT 4", array($lang));
         return $hasil->result_array();

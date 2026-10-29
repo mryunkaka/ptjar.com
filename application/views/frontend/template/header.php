@@ -42,7 +42,8 @@
   <!-- <link href="assets/css/variables-pink.css" rel="stylesheet"> -->
 
   <!-- Template Main CSS File -->
-  <link href="<?= base_url('assets/HeroBiz-pro') ?>/assets/css/main.css" rel="stylesheet">
+  <?php $mainCssPath = FCPATH . 'assets/HeroBiz-pro/assets/css/main.css'; ?>
+  <link href="<?= base_url('assets/HeroBiz-pro/assets/css/main.css') ?>?v=<?= is_file($mainCssPath) ? filemtime($mainCssPath) : '1' ?>" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: HeroBiz - v2.1.0

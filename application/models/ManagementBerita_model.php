@@ -85,7 +85,7 @@ class ManagementBerita_model extends CI_Model
 
     public function count_berita($lang)
     {
-        $hasil = $this->db->query("SELECT COUNT(nu_id) as cnt  FROM tr_posts WHERE vc_type='berita'and vc_lang=?", array($lang));
+        $hasil = $this->db->query("SELECT COUNT(nu_id) as cnt FROM tr_posts WHERE vc_type='berita' AND vc_lang=? AND vc_status=1 AND dt_deleted IS NULL", array($lang));
         return $hasil->result_array();
     }
 
@@ -118,7 +118,7 @@ class ManagementBerita_model extends CI_Model
         FROM
 	    tr_posts a
         WHERE
-	    a.vc_type = 'berita' and a.vc_lang=? and a.dt_deleted IS NULL
+	    a.vc_type = 'berita' AND a.vc_lang=? AND a.vc_status=1 AND a.dt_deleted IS NULL
         ORDER BY
 	    a.dt_published DESC,
 	    (SELECT MAX(image.int_thumbnail) FROM tr_post_images image WHERE image.nu_post_id = a.nu_id AND image.dt_deleted IS NULL) DESC
@@ -147,14 +147,15 @@ class ManagementBerita_model extends CI_Model
         FROM
 	        tr_posts a
         WHERE
-	        a.vc_type = 'berita' and a.vc_lang=? and a.dt_deleted IS NULL
+	        a.vc_type = 'berita' AND a.vc_lang=? AND a.vc_status=1 AND a.dt_deleted IS NULL
         ORDER BY
 	a.dt_published DESC LIMIT 4", array($lang));
         return $hasil->result_array();
     }
 
-    public function get_berita_detail($id)
+    public function get_berita_detail($id, $publishedOnly = FALSE)
     {
+        $publicFilter = $publishedOnly ? 'AND a.vc_status=1 AND a.dt_deleted IS NULL' : '';
         $hasil = $this->db->query("SELECT
 	a.nu_id,
 	a.uuid,
@@ -176,9 +177,46 @@ class ManagementBerita_model extends CI_Model
 	LEFT JOIN tr_post_tag AS c ON a.nu_id = c.vc_post_id
 	LEFT JOIN tr_tags AS d ON c.vc_tag_id = d.nu_id 
     WHERE
-     a.uuid=?", array($id));
+	 a.uuid=? " . $publicFilter, array($id));
         return $hasil->result_array();
     }
+
+    public function publish_draft($uuid)
+    {
+        if (!is_string($uuid) || $uuid === '' || strlen($uuid) > 64) {
+            return FALSE;
+        }
+
+        $this->db->where('uuid', $uuid);
+        $this->db->where('vc_type', 'berita');
+        $this->db->where('vc_status', 0);
+        $this->db->where('dt_deleted', NULL);
+        $this->db->update('tr_posts', array(
+            'vc_status' => 1,
+            'dt_updated' => date('Y-m-d H:i:s'),
+        ));
+
+        return $this->db->affected_rows() === 1;
+    }
+
+    public function unpublish_post($uuid)
+    {
+        if (!is_string($uuid) || $uuid === '' || strlen($uuid) > 64) {
+            return FALSE;
+        }
+
+        $this->db->where('uuid', $uuid);
+        $this->db->where('vc_type', 'berita');
+        $this->db->where('vc_status', 1);
+        $this->db->where('dt_deleted', NULL);
+        $this->db->update('tr_posts', array(
+            'vc_status' => 0,
+            'dt_updated' => date('Y-m-d H:i:s'),
+        ));
+
+        return $this->db->affected_rows() === 1;
+    }
+
     public function get_detail_photo($uuid)
     {
         $id = $this->db->get_where('tr_posts', ['uuid' => $uuid])->row_array();
@@ -188,7 +226,19 @@ class ManagementBerita_model extends CI_Model
             FROM
             tr_post_images
            where nu_post_id=? and dt_deleted is null order by int_thumbnail desc", array($id));
-        return $hasil->result_array();
+        $images = $hasil->result_array();
+        $uniqueImages = array();
+        $seenFilenames = array();
+        foreach ($images as $image) {
+            $filename = isset($image['vc_image']) ? strtolower(basename(str_replace('\\', '/', trim((string) $image['vc_image'])))) : '';
+            if ($filename === '' || isset($seenFilenames[$filename])) {
+                continue;
+            }
+            $seenFilenames[$filename] = TRUE;
+            $uniqueImages[] = $image;
+        }
+
+        return $uniqueImages;
     }
 
     public function get_detail_tags($uuid)

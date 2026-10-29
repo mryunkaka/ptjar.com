@@ -11,6 +11,38 @@
                              </a>
                          </div>
                      </div>
+                     <div class="card border mb-3">
+                         <div class="card-body">
+                             <h5 class="card-title">Impor dari Jhonlin Magazine</h5>
+                             <p class="mb-3">Ambil hingga 10 berita terbaru. Berita baru akan disimpan sebagai draft untuk ditinjau.</p>
+                             <form method="post" action="<?= site_url('Management_Berita/import_from_jhonlinmagz') ?>" class="row g-2 align-items-end">
+                                 <input type="hidden" name="<?= html_escape($this->security->get_csrf_token_name()) ?>" value="<?= html_escape($this->security->get_csrf_hash()) ?>">
+                                 <div class="col-md-4">
+                                     <label for="import_category" class="form-label">Kategori lokal</label>
+                                     <select class="form-select" id="import_category" name="category" required>
+                                         <option value="">Pilih kategori</option>
+                                         <?php foreach ($category as $item) : ?>
+                                             <option value="<?= (int) $item['nu_id'] ?>"><?= html_escape($item['vc_category_name']) ?></option>
+                                         <?php endforeach ?>
+                                     </select>
+                                 </div>
+                                 <div class="col-md-3">
+                                     <label for="import_language" class="form-label">Bahasa</label>
+                                     <select class="form-select" id="import_language" name="bahasa" required>
+                                         <option value="">Pilih bahasa</option>
+                                         <?php foreach ($language as $item) : ?>
+                                             <option value="<?= html_escape($item['vc_code']) ?>"><?= html_escape($item['vc_desc']) ?></option>
+                                         <?php endforeach ?>
+                                     </select>
+                                 </div>
+                                 <div class="col-md-3">
+                                     <button type="submit" class="btn btn-primary" <?= empty($category) || empty($language) ? 'disabled' : '' ?>>
+                                         <i class="bi bi-cloud-download me-1"></i> Impor berita terbaru
+                                     </button>
+                                 </div>
+                             </form>
+                         </div>
+                     </div>
                      <!-- Table with stripped rows -->
                      <div id="messages"><?= $this->session->flashdata('msg') ?> </div>
                      <table class="table table-striped">
@@ -54,6 +86,19 @@
                                          <td><?= date('d-M-Y', strtotime($sm['dt_published'])); ?></td>
                                          <td><img class="border border-secondary" width="20px" src="<?php echo base_url() . $sm['vc_lang_img']; ?>"></td>
                                          <td>
+                                             <?php if ((int) $sm['vc_status'] === 0) { ?>
+                                                 <form method="post" action="<?= site_url('Management_Berita/publish_berita') ?>" class="d-inline" onsubmit="return confirm('Terbitkan berita ini sekarang?')">
+                                                     <input type="hidden" name="uuid" value="<?= html_escape($sm['uuid']) ?>">
+                                                     <input type="hidden" name="<?= html_escape($this->security->get_csrf_token_name()) ?>" value="<?= html_escape($this->security->get_csrf_hash()) ?>">
+                                                     <button type="submit" class="btn btn-success btn-sm mb-2"><i class="bi bi-send-check me-1"></i>Post</button>
+                                                 </form>
+                                             <?php } else { ?>
+                                                 <form method="post" action="<?= site_url('Management_Berita/unpublish_berita') ?>" class="d-inline" onsubmit="return confirm('Tarik berita ini dari publik dan jadikan Draft?')">
+                                                     <input type="hidden" name="uuid" value="<?= html_escape($sm['uuid']) ?>">
+                                                     <input type="hidden" name="<?= html_escape($this->security->get_csrf_token_name()) ?>" value="<?= html_escape($this->security->get_csrf_hash()) ?>">
+                                                     <button type="submit" class="btn btn-warning btn-sm mb-2"><i class="bi bi-arrow-counterclockwise me-1"></i>Tarik</button>
+                                                 </form>
+                                             <?php } ?>
                                              <a href="<?= base_url() ?>Management_Berita/berita_preview/<?= $sm['uuid'] ?>" class="badge bg-info text-dark p-3 mb-3"><i class="bi bi-info-circle me-1"></i>
                                                  Preview
                                              </a>

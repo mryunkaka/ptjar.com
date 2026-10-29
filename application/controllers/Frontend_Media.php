@@ -169,7 +169,11 @@ class Frontend_Media extends CI_Controller
         $data['tabtitle'] = 'Management Berita';
         $data['title'] = 'Management Berita';
         $lang = $this->session->userdata('site_lang');
-        $data['detail'] = $this->ManagementBerita_model->get_berita_detail($id);
+        $data['detail'] = $this->ManagementBerita_model->get_berita_detail($id, TRUE);
+        if (empty($data['detail'])) {
+            show_404();
+            return;
+        }
         $data['photo'] = $this->ManagementBerita_model->get_detail_photo($id);
         $data['url'] = $this->ManagementBerita_model->get_conf_url();
         $data['list_recent'] = $this->ManagementBerita_model->get_berita_list_recent($lang);
