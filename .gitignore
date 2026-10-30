@@ -38,7 +38,10 @@ user_guide_src/cilexer/pycilexer.egg-info/*
 
 /application/cache/sessions/*
 /.env
-/docs/
+/application/config/analytics.local.php
+!/docs/
+/docs/*
+!/docs/ANALYTICS_TRACKING.md
 /assets/*
 /assets/**/*
 !/assets/**/

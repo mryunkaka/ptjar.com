@@ -1,9 +1,59 @@
 <!DOCTYPE html>
-<?php $seoMeta = frontend_seo_current(isset($seo_meta) ? $seo_meta : array()); ?>
+<?php
+  $seoMeta = frontend_seo_current(isset($seo_meta) ? $seo_meta : array());
+  $this->config->load('analytics', true);
+  $ga4MeasurementIds = (array) $this->config->item('ga4_measurement_ids', 'analytics');
+  $gscVerificationTokens = (array) $this->config->item('gsc_verification_tokens', 'analytics');
+  $seoDomain = frontend_seo_current_domain();
+  $ga4MeasurementId = isset($ga4MeasurementIds[$seoDomain]) ? trim((string) $ga4MeasurementIds[$seoDomain]) : '';
+  $gscVerificationToken = isset($gscVerificationTokens[$seoDomain]) ? trim((string) $gscVerificationTokens[$seoDomain]) : '';
+  $isHomepage = count($this->uri->segment_array()) === 0;
+  $ga4Enabled = preg_match('/^G-[A-Z0-9]+$/i', $ga4MeasurementId) === 1;
+?>
 <html lang="<?= html_escape($seoMeta['lang']) ?>">
  
  
 <head>
+  <?php if ($isHomepage && $gscVerificationToken !== '') { ?>
+    <meta name="google-site-verification" content="<?= html_escape($gscVerificationToken) ?>">
+  <?php } ?>
+  <?php if ($ga4Enabled) { ?>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=<?= rawurlencode($ga4MeasurementId) ?>"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', <?= json_encode($ga4MeasurementId) ?>);
+
+      document.addEventListener('submit', function (event) {
+        var form = event.target;
+        var searchInput = form && form.querySelector ? form.querySelector('[name="search"]') : null;
+        var actionPath;
+        try {
+          actionPath = new URL(form.action, window.location.href).pathname.replace(/\/+$/, '');
+        } catch (error) {
+          return;
+        }
+        if (!searchInput || !/\/Search$/i.test(actionPath)) {
+          return;
+        }
+        var searchTerm = searchInput.value.trim().slice(0, 100);
+        if (!searchTerm || /[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/i.test(searchTerm) || /\+?\d[\d\s().-]{7,}\d/.test(searchTerm)) {
+          return;
+        }
+        gtag('event', 'search', { search_term: searchTerm });
+      });
+
+      document.addEventListener('click', function (event) {
+        var link = event.target.closest ? event.target.closest('a[href]') : null;
+        var href = link ? (link.getAttribute('href') || '').trim() : '';
+        if (!/^mailto:/i.test(href)) {
+          return;
+        }
+        gtag('event', 'contact_click', { method: 'email' });
+      });
+    </script>
+  <?php } ?>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 

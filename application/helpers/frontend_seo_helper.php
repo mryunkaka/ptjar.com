@@ -4,16 +4,23 @@ defined('BASEPATH') or exit('No direct script access allowed');
 if (!function_exists('frontend_seo_canonical_base')) {
     function frontend_seo_canonical_base()
     {
+        if (frontend_seo_current_domain() === 'ptjar.co.id') {
+            return 'https://ptjar.co.id/';
+        }
+
+        return 'https://ptjar.com/';
+    }
+}
+
+if (!function_exists('frontend_seo_current_domain')) {
+    function frontend_seo_current_domain()
+    {
         $ci = &get_instance();
         $host = strtolower((string) $ci->input->server('HTTP_HOST'));
         $host = preg_replace('/:\d+$/', '', $host);
         $host = preg_replace('/^www\./', '', $host);
 
-        if ($host === 'ptjar.co.id') {
-            return 'https://ptjar.co.id/';
-        }
-
-        return 'https://ptjar.com/';
+        return in_array($host, array('ptjar.com', 'ptjar.co.id'), true) ? $host : '';
     }
 }
 
