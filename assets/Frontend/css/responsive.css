@@ -1,0 +1,191 @@
+/* Small, shared refinements for the existing HeroBiz frontend. */
+:root {
+  scroll-padding-top: 78px;
+}
+
+img,
+svg,
+video,
+iframe {
+  max-width: 100%;
+}
+
+img,
+video {
+  height: auto;
+}
+
+.header .container-fluid {
+  gap: 16px;
+}
+
+.header .logo {
+  flex: 0 0 auto;
+}
+
+.header .logo img {
+  max-height: 42px;
+}
+
+/* Keep the full desktop navigation readable on common laptop widths. */
+@media (min-width: 1280px) and (max-width: 1539.98px) {
+  .navbar > ul > li > a,
+  .navbar > ul > li > a:focus {
+    padding: 12px clamp(6px, 0.65vw, 10px);
+    font-size: clamp(13px, 0.92vw, 15px);
+  }
+
+  .navbar .dropdown ul a {
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 1279.98px) {
+  .header {
+    min-height: 64px;
+    padding: 10px 0;
+  }
+
+  .header .container-fluid {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .header .logo img {
+    max-width: 180px;
+    max-height: 40px;
+    object-fit: contain;
+    object-position: left center;
+  }
+
+  .navbar {
+    width: min(390px, calc(100% - 32px));
+  }
+
+  .mobile-nav-toggle {
+    top: 18px;
+    right: 18px;
+    padding: 4px;
+    border-radius: 8px;
+  }
+
+  .mobile-nav-active .navbar ul {
+    padding: 72px 0 24px;
+  }
+
+  .navbar a,
+  .navbar a:focus {
+    min-height: 44px;
+    white-space: normal;
+  }
+
+  .navbar .dropdown ul a {
+    padding: 10px 24px;
+  }
+
+  section {
+    padding: 48px 0;
+  }
+}
+
+.section-header h2 {
+  font-size: clamp(30px, 4vw, 46px);
+}
+
+.breadcrumbs h2 {
+  overflow-wrap: anywhere;
+}
+
+.table,
+.table-responsive,
+pre {
+  max-width: 100%;
+}
+
+.table th,
+.table td {
+  white-space: normal;
+}
+
+a:focus-visible,
+button:focus-visible,
+[role="button"]:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+@media (max-width: 767.98px) {
+  .table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  section {
+    padding: 38px 0;
+  }
+
+  .container,
+  .container-fluid {
+    --bs-gutter-x: 1.5rem;
+  }
+
+  .breadcrumbs {
+    margin-top: 64px;
+    padding: 12px 0;
+  }
+
+  .breadcrumbs h2 {
+    font-size: clamp(22px, 6vw, 28px);
+  }
+
+  .section-header {
+    padding-bottom: 26px;
+  }
+
+  .section-header h2 {
+    margin-bottom: 14px;
+  }
+
+  .footer-content {
+    padding: 42px 0 24px;
+  }
+
+  .footer-info p[style*="font-size"] {
+    font-size: 21px !important;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .header .logo img {
+    max-width: 152px;
+  }
+
+  .mobile-nav-toggle {
+    top: 16px;
+    right: 12px;
+  }
+
+  .carousel-img-alif {
+    max-height: 62vh;
+    object-fit: cover;
+  }
+
+  .footer-legal .container {
+    gap: 12px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

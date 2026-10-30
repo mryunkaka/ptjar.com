@@ -58,3 +58,13 @@ user_guide_src/cilexer/pycilexer.egg-info/*
 !/assets/file/backend/
 !/assets/file/backend/**/
 !/assets/file/backend/**/*.webp
+
+# Frontend local fonts and responsive overrides
+!/assets/Frontend/css/fonts.css
+!/assets/Frontend/css/responsive.css
+!/assets/Frontend/fonts/*.woff2
+!/assets/Frontend/fonts/*-OFL.txt
+
+# News images are local media files and should not be versioned.
+/assets/file/backend/upload/berita/
+/assets/file/frontend/image/berita/

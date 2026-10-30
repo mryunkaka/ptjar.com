@@ -16,10 +16,8 @@
   <!--<link href="<?= base_url('assets/HeroBiz-pro') ?>/assets/img/apple-touch-icon.png" rel="apple-touch-icon">-->
     <link href="<?= base_url() ?>assets/file/frontend/image/template/iconjar.png" rel="apple-touch-icon">
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+  <!-- Local copies of the existing Google Fonts families -->
+  <link href="<?= base_url('assets/Frontend/css/fonts.css') ?>" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="<?= base_url('assets/HeroBiz-pro') ?>/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -44,6 +42,8 @@
   <!-- Template Main CSS File -->
   <?php $mainCssPath = FCPATH . 'assets/HeroBiz-pro/assets/css/main.css'; ?>
   <link href="<?= base_url('assets/HeroBiz-pro/assets/css/main.css') ?>?v=<?= is_file($mainCssPath) ? filemtime($mainCssPath) : '1' ?>" rel="stylesheet">
+  <?php $responsiveCssPath = FCPATH . 'assets/Frontend/css/responsive.css'; ?>
+  <link href="<?= base_url('assets/Frontend/css/responsive.css') ?>?v=<?= is_file($responsiveCssPath) ? filemtime($responsiveCssPath) : '1' ?>" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: HeroBiz - v2.1.0
