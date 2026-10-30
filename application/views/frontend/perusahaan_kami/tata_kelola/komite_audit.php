@@ -3,7 +3,7 @@
   <!-- ======= About Section ======= -->
   <section id="komite" class="komite text-justify">
     <div class="section-header mt-2">
-      <h1><?php echo $this->lang->line('komite_audit_judul') ?></h2>
+      <h1><?php echo $this->lang->line('komite_audit_judul') ?></h1>
     </div>
     <div class="row g-4 g-lg-5 mb-5" data-aos="fade-up" data-aos-delay="200">
       <div class="col-2"></div>
@@ -20,7 +20,7 @@
 
         <div class="col-lg-5">
           <div class="about-img">
-            <img src="<?= base_url() ?>assets/file/frontend/image/audit/audit1.jpg" class="img-fluid" alt="">
+            <img src="<?= base_url() ?>assets/file/frontend/image/audit/audit1.jpg" class="img-fluid" alt="Dokumen dan informasi Komite Audit PT Jhonlin Agro Raya Tbk">
 
           </div>
         </div>
@@ -96,7 +96,7 @@
         
         <div class="col-lg-5">
           <div class="about-img">
-            <img src="<?= base_url() ?>assets/file/frontend/image/audit/anggota_komite_audit.jpg" class="img-fluid" alt="">
+            <img src="<?= base_url() ?>assets/file/frontend/image/audit/anggota_komite_audit.jpg" class="img-fluid" alt="Anggota Komite Audit PT Jhonlin Agro Raya Tbk">
 
           </div>
         </div>

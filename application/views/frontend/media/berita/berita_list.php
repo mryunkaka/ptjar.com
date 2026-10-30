@@ -4,7 +4,7 @@
   <!-- ======= Blog Section ======= -->
   <section id="blog" class="blog text-justify">
     <div class="section-header mt-4">
-      <h1><?php echo $this->lang->line('berita_judul') ?></h2>
+      <h1><?php echo $this->lang->line('berita_judul') ?></h1>
     </div>
 
     <div class="container" data-aos="fade-up">
@@ -23,9 +23,9 @@
 
                     <div class="post-img">
                       <?php if (empty($sm['vc_image'])) { ?>
-                        <?= webp_picture_tag(base_url('assets/file/backend/upload/berita/thumbnail/default/default.png'), '...', array('class' => 'img-fluid', 'loading' => 'lazy', 'decoding' => 'async')) ?>
+                        <?= webp_picture_tag(base_url('assets/file/backend/upload/berita/thumbnail/default/default.png'), '', array('class' => 'img-fluid', 'loading' => 'lazy', 'decoding' => 'async')) ?>
                       <?php } else { ?>
-                        <?= webp_picture_tag(base_url() . $url[0]['vc_url'] . $sm['vc_image'], '...', array('class' => 'img-fluid', 'loading' => 'lazy', 'decoding' => 'async')) ?>
+                        <?= webp_picture_tag(base_url() . $url[0]['vc_url'] . $sm['vc_image'], isset($sm['vc_title']) ? strip_tags($sm['vc_title']) : '', array('class' => 'img-fluid', 'loading' => 'lazy', 'decoding' => 'async')) ?>
                       <?php } ?>
 
                     </div>
@@ -101,7 +101,7 @@
                     $i = 1; ?>
                     <?php foreach ($list_recent as $sm) : ?>
                       <div class="post-item mt-3">
-                        <?= webp_picture_tag(base_url() . $url[0]['vc_url'] . $sm['vc_image'], '', array('class' => 'flex-shrink-0', 'loading' => 'lazy', 'decoding' => 'async')) ?>
+                        <?= webp_picture_tag(base_url() . $url[0]['vc_url'] . $sm['vc_image'], isset($sm['vc_title']) ? strip_tags($sm['vc_title']) : '', array('class' => 'flex-shrink-0', 'loading' => 'lazy', 'decoding' => 'async')) ?>
                         <div>
                           <h4><a href="<?= html_escape(base_url('Berita/' . rawurlencode((string) $sm['uuid']))) ?>"><?= html_escape($sm['vc_title']) ?></a></h4>
                           <time datetime=" 2020-01-01"><?= date('d-M-Y', strtotime($sm['dt_published'])); ?></time>

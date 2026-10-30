@@ -2,7 +2,7 @@
   <!-- ======= About Section ======= -->
   <section id="profil" class="profil ">
     <div class="section-header mt-2">
-      <h1> <?php echo $this->lang->line('perusahaan_profil_judul') ?></h2>
+      <h1> <?php echo $this->lang->line('perusahaan_profil_judul') ?></h1>
     </div>
 
     <div class="container" data-aos="fade-up">
@@ -12,7 +12,7 @@
 
         <div class="col-lg-5">
           <div class="about-img">
-            <img src="assets/img/about.jpg" class="img-fluid" alt="">
+            <img src="assets/img/about.jpg" class="img-fluid" alt="Kegiatan usaha PT Jhonlin Agro Raya Tbk">
           </div>
         </div>
       </div>

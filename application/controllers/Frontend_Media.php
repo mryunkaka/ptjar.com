@@ -174,6 +174,13 @@ class Frontend_Media extends CI_Controller
             show_404();
             return;
         }
+        $postTitle = trim(html_entity_decode(strip_tags((string) $data['detail'][0]['vc_title']), ENT_QUOTES, 'UTF-8'));
+        $postDescription = $this->seo_excerpt(isset($data['detail'][0]['vc_content']) ? $data['detail'][0]['vc_content'] : '');
+        $data['seo_meta'] = array(
+            'title' => $postTitle . ' | PT Jhonlin Agro Raya Tbk',
+            'description' => $postDescription,
+            'canonical' => frontend_seo_canonical_base() . 'Berita/' . rawurlencode((string) $id)
+        );
         $data['photo'] = $this->ManagementBerita_model->get_detail_photo($id);
         $data['url'] = $this->ManagementBerita_model->get_conf_url();
         $data['list_recent'] = $this->ManagementBerita_model->get_berita_list_recent($lang);
@@ -257,6 +264,17 @@ class Frontend_Media extends CI_Controller
         $data['title'] = 'Management Berita';
         $lang = $this->session->userdata('site_lang');
         $data['detail'] = $this->ManagementSiaranPers_model->get_berita_detail($id);
+        if (empty($data['detail'])) {
+            show_404();
+            return;
+        }
+        $postTitle = trim(html_entity_decode(strip_tags((string) $data['detail'][0]['vc_title']), ENT_QUOTES, 'UTF-8'));
+        $postDescription = $this->seo_excerpt(isset($data['detail'][0]['vc_content']) ? $data['detail'][0]['vc_content'] : '');
+        $data['seo_meta'] = array(
+            'title' => $postTitle . ' | PT Jhonlin Agro Raya Tbk',
+            'description' => $postDescription,
+            'canonical' => frontend_seo_canonical_base() . 'Siaran_Pers/' . rawurlencode((string) $id)
+        );
         $data['photo'] = $this->ManagementSiaranPers_model->get_detail_photo($id);
         $data['url'] = $this->ManagementSiaranPers_model->get_conf_url();
         $data['list_recent'] = $this->ManagementSiaranPers_model->get_berita_list_recent($lang);
@@ -265,5 +283,14 @@ class Frontend_Media extends CI_Controller
         $this->load->view('frontend/template/navbar');
         $this->load->view('frontend/media/siaran_pers/siaran_pers_detail');
         $this->load->view('frontend/template/footer');
+    }
+
+    private function seo_excerpt($content)
+    {
+        $plainText = trim(preg_replace('/\s+/u', ' ', html_entity_decode(strip_tags((string) $content), ENT_QUOTES, 'UTF-8')));
+        if ($plainText === '') {
+            return 'Berita dan informasi resmi dari PT Jhonlin Agro Raya Tbk.';
+        }
+        return function_exists('mb_substr') ? mb_substr($plainText, 0, 155, 'UTF-8') : substr($plainText, 0, 155);
     }
 }

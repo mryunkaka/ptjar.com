@@ -8,6 +8,7 @@
 
           <article class="blog-details">
 
+            <h1 class="visually-hidden"><?= html_escape($detail[0]['vc_title']) ?></h1>
 
 
 
@@ -18,14 +19,14 @@
 
                     <div class="carousel-item active">
                       <div class="row justify-content-center gy-6">
-                        <?= webp_picture_tag(base_url() . $url[0]['vc_url'] . $sm['vc_image'], '', array('class' => 'img-fluid img carousel-img-alif', 'fetchpriority' => 'high', 'decoding' => 'async')) ?>
+                        <?= webp_picture_tag(base_url() . $url[0]['vc_url'] . $sm['vc_image'], strip_tags($detail[0]['vc_title']), array('class' => 'img-fluid img carousel-img-alif', 'fetchpriority' => 'high', 'decoding' => 'async')) ?>
 
                       </div>
                     </div>
                   <?php } else { ?>
                     <div class="carousel-item">
                       <div class="row justify-content-center gy-6">
-                        <?= webp_picture_tag(base_url() . $url[0]['vc_url'] . $sm['vc_image'], '', array('class' => 'img-fluid img carousel-img-alif', 'loading' => 'lazy', 'decoding' => 'async')) ?>
+                        <?= webp_picture_tag(base_url() . $url[0]['vc_url'] . $sm['vc_image'], strip_tags($detail[0]['vc_title']), array('class' => 'img-fluid img carousel-img-alif', 'loading' => 'lazy', 'decoding' => 'async')) ?>
 
                       </div>
                     </div>
@@ -110,7 +111,7 @@
                     $i = 1; ?>
                     <?php foreach ($list_recent as $sm) : ?>
                       <div class="post-item mt-3">
-                        <?= webp_picture_tag(base_url() . $url[0]['vc_url'] . $sm['vc_image'], '', array('class' => 'flex-shrink-0', 'loading' => 'lazy', 'decoding' => 'async')) ?>
+                        <?= webp_picture_tag(base_url() . $url[0]['vc_url'] . $sm['vc_image'], isset($sm['vc_title']) ? strip_tags($sm['vc_title']) : '', array('class' => 'flex-shrink-0', 'loading' => 'lazy', 'decoding' => 'async')) ?>
                         <div>
                           <h4><a href="<?= html_escape(base_url('Berita/' . rawurlencode((string) $sm['uuid']))) ?>"><?= html_escape($sm['vc_title']) ?></a></h4>
                           <time datetime=" 2020-01-01"><?= date('d-M-Y', strtotime($sm['dt_published'])); ?></time>

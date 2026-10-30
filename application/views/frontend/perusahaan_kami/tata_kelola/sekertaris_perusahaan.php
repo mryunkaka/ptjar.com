@@ -3,7 +3,7 @@
   <!-- ======= About Section ======= -->
   <section id="secper" class="secper text-justify">
     <div class="section-header mt-2">
-      <h1> <?php echo $this->lang->line('sekertaris_judul') ?></h2>
+      <h1> <?php echo $this->lang->line('sekertaris_judul') ?></h1>
     </div>
 
     <div class="container" data-aos="fade-up">
@@ -13,7 +13,7 @@
         <div class="row mt-4">
           <div class="col-lg-5">
             <div class="about-img">
-              <img src="<?= base_url() ?>assets/file/frontend/image/sec_per.jpg" class="img-fluid" alt="" height="300" width="300">
+              <img src="<?= base_url() ?>assets/file/frontend/image/sec_per.jpg" class="img-fluid" alt="Foto Sekretaris Perusahaan PT Jhonlin Agro Raya Tbk" height="300" width="300">
 
             </div>
           </div>

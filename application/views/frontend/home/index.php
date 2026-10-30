@@ -154,6 +154,7 @@
   }
 </style>
 <main id="main">
+  <h1 class="visually-hidden">PT Jhonlin Agro Raya Tbk</h1>
 
   <section id="carousel">
     <div id="carouselExampleFade" class="carousel slide carousel-fade mt-3" data-bs-ride="carousel" data-bs-interval="5000">
@@ -257,7 +258,7 @@
 
         <div class="col-lg-5">
           <div class="about-img">
-            <?= webp_picture_tag(base_url('assets/file/frontend/image/visimisi/sawit_visimisi.jpg'), '', array('class' => 'img-fluid', 'loading' => 'lazy', 'decoding' => 'async')) ?>
+            <?= webp_picture_tag(base_url('assets/file/frontend/image/visimisi/sawit_visimisi.jpg'), 'Visi, misi, dan nilai PT Jhonlin Agro Raya Tbk', array('class' => 'img-fluid', 'loading' => 'lazy', 'decoding' => 'async')) ?>
           </div>
         </div>
 
@@ -311,7 +312,7 @@
         <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
           <div class="service-item">
             <div class="img">
-              <?= webp_picture_tag(base_url('assets/file/frontend/image/layanan/cpo.JPG'), '', array('class' => 'img-fluid', 'loading' => 'lazy', 'decoding' => 'async')) ?>
+              <?= webp_picture_tag(base_url('assets/file/frontend/image/layanan/cpo.JPG'), 'Minyak sawit mentah (CPO)', array('class' => 'img-fluid', 'loading' => 'lazy', 'decoding' => 'async')) ?>
             </div>
             <div class="details position-relative" style="height:350px">
               <div class="icon">
@@ -328,7 +329,7 @@
         <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
           <div class="service-item">
             <div class="img">
-              <?= webp_picture_tag(base_url('assets/file/frontend/image/layanan/fame.JPG'), '', array('class' => 'img-fluid', 'loading' => 'lazy', 'decoding' => 'async')) ?>
+              <?= webp_picture_tag(base_url('assets/file/frontend/image/layanan/fame.JPG'), 'Produk biodiesel FAME', array('class' => 'img-fluid', 'loading' => 'lazy', 'decoding' => 'async')) ?>
             </div>
             <div class="details position-relative" style="height:350px">
               <div class="icon">
@@ -345,7 +346,7 @@
         <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
           <div class="service-item">
             <div class="img">
-              <?= webp_picture_tag(base_url('assets/file/frontend/image/layanan/RBDPO.jpg'), '', array('class' => 'img-fluid', 'loading' => 'lazy', 'decoding' => 'async')) ?>
+              <?= webp_picture_tag(base_url('assets/file/frontend/image/layanan/RBDPO.jpg'), 'Refined Bleached Deodorized Palm Oil (RBDPO)', array('class' => 'img-fluid', 'loading' => 'lazy', 'decoding' => 'async')) ?>
             </div>
             <div class="details position-relative " style="height:350px">
               <div class="icon">
@@ -366,7 +367,7 @@
         <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
           <div class="service-item">
             <div class="img">
-              <?= webp_picture_tag(base_url('assets/file/frontend/image/layanan/pfad.jpg'), '', array('class' => 'img-fluid', 'loading' => 'lazy', 'decoding' => 'async')) ?>
+              <?= webp_picture_tag(base_url('assets/file/frontend/image/layanan/pfad.jpg'), 'Palm Fatty Acid Distillate (PFAD)', array('class' => 'img-fluid', 'loading' => 'lazy', 'decoding' => 'async')) ?>
             </div>
             <div class="details position-relative" style="height:350px">
               <div class="icon">
@@ -383,7 +384,7 @@
         <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
           <div class="service-item">
             <div class="img">
-              <?= webp_picture_tag(base_url('assets/file/frontend/image/layanan/Glycerin.jpg'), '', array('class' => 'img-fluid', 'loading' => 'lazy', 'decoding' => 'async')) ?>
+              <?= webp_picture_tag(base_url('assets/file/frontend/image/layanan/Glycerin.jpg'), 'Produk gliserin', array('class' => 'img-fluid', 'loading' => 'lazy', 'decoding' => 'async')) ?>
             </div>
             <div class="details position-relative" style="height:350px">
               <div class="icon">
@@ -400,7 +401,7 @@
         <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
           <div class="service-item">
             <div class="img">
-              <?= webp_picture_tag(base_url('assets/file/frontend/image/layanan/fatty meter.jpg'), '', array('class' => 'img-fluid', 'loading' => 'lazy', 'decoding' => 'async')) ?>
+              <?= webp_picture_tag(base_url('assets/file/frontend/image/layanan/fatty meter.jpg'), 'Produk fatty matter', array('class' => 'img-fluid', 'loading' => 'lazy', 'decoding' => 'async')) ?>
             </div>
             <div class="details position-relative" style="height:350px">
               <div class="icon">

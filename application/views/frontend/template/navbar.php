@@ -7,7 +7,7 @@
 
       <a href="<?= base_url() ?>" class="logo d-flex align-items-center scrollto me-auto me-lg-0">
         <!-- Uncomment the line below if you also wish to use an image logo -->
-        <img src="<?= base_url() ?>assets/file/frontend/image/template/iconjar.png" alt="">
+        <img src="<?= base_url() ?>assets/file/frontend/image/template/iconjar.png" alt="PT Jhonlin Agro Raya Tbk">
 
       </a>
 
@@ -93,10 +93,10 @@
           </li>
 
 
-          <li class="dropdown"><a><span><?= $_SESSION['site_lang'] == 'ID' ? '<img width="20px" src="' . base_url() . 'assets/Frontend/icon/ina.png">' : '<img width="20px" src="' . base_url() . 'assets/Frontend/icon/uk.png">'; ?><?= $_SESSION['site_lang'] ?></span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+          <li class="dropdown"><a><span><?= $_SESSION['site_lang'] == 'ID' ? '<img width="20px" src="' . base_url() . 'assets/Frontend/icon/ina.png" alt="">' : '<img width="20px" src="' . base_url() . 'assets/Frontend/icon/uk.png" alt="">'; ?><?= $_SESSION['site_lang'] ?></span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
             <ul>
-              <li><a href="<?php echo base_url("Frontend/Lang/ENG"); ?>" <?= $_SESSION['site_lang'] == 'ENG' ? 'style=" display:none;"' : ''; ?>> <img width="20px" src="<?php echo base_url(); ?>assets/Frontend/icon/uk.png"> ENG</a></li>
-              <li> <a href="<?php echo base_url("Frontend/Lang/ID"); ?>" <?= $_SESSION['site_lang'] == 'ID' ? 'style=" display:none;"' : ''; ?>><img width="20px" src="<?php echo base_url(); ?>assets/Frontend/icon/ina.png"> </i>ID</a></li>
+              <li><a href="<?php echo base_url("Frontend/Lang/ENG"); ?>" <?= $_SESSION['site_lang'] == 'ENG' ? 'style=" display:none;"' : ''; ?>> <img width="20px" src="<?php echo base_url(); ?>assets/Frontend/icon/uk.png" alt=""> ENG</a></li>
+              <li> <a href="<?php echo base_url("Frontend/Lang/ID"); ?>" <?= $_SESSION['site_lang'] == 'ID' ? 'style=" display:none;"' : ''; ?>><img width="20px" src="<?php echo base_url(); ?>assets/Frontend/icon/ina.png" alt=""> </i>ID</a></li>
 
             </ul>
 

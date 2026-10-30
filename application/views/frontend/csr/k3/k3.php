@@ -7,12 +7,13 @@
       }
   </style>
   <section>
+      <h1 class="visually-hidden"><?php echo $this->lang->line('k3_head') ?></h1>
       <div id="carouselExampleFade" class="carousel slide carousel-fade mt-3" data-bs-ride="carousel" data-bs-interval="5000">
           <div class="carousel-inner">
               <div class="carousel-item active">
 
                   <div class="row justify-content-center gy-6">
-                      <img src="<?= base_url('') ?>assets/file/frontend/image/k3/k3_1.jpg" alt="" class="img-fluid img carousel-img-alif">
+                      <img src="<?= base_url('') ?>assets/file/frontend/image/k3/k3_1.jpg" alt="Dokumentasi kesehatan dan keselamatan kerja, bagian 1" class="img-fluid img carousel-img-alif">
                       <div class="col-lg-9 text-center">
 
                           <h2 class="color-secondary-light"></h2>
@@ -26,7 +27,7 @@
               <div class="carousel-item ">
 
                   <div class="row justify-content-center gy-6">
-                      <img src="<?= base_url('') ?>assets/file/frontend/image/k3/k3_2.jpg" alt="" class="img-fluid img carousel-img-alif">
+                      <img src="<?= base_url('') ?>assets/file/frontend/image/k3/k3_2.jpg" alt="Dokumentasi kesehatan dan keselamatan kerja, bagian 2" class="img-fluid img carousel-img-alif">
                       <div class="col-lg-9 text-center">
 
                           <h2 class="color-secondary-light"></h2>
@@ -40,7 +41,7 @@
               <div class="carousel-item">
 
                   <div class="row justify-content-center gy-6">
-                      <img src="<?= base_url('') ?>assets/file/frontend/image/k3/k3_3.jpg" alt="" class="img-fluid img carousel-img-alif">
+                      <img src="<?= base_url('') ?>assets/file/frontend/image/k3/k3_3.jpg" alt="Dokumentasi kesehatan dan keselamatan kerja, bagian 3" class="img-fluid img carousel-img-alif">
                       <div class="col-lg-9 text-center">
 
                           <h2 class="color-secondary-light"></h2>
@@ -71,7 +72,7 @@
 
           <div class="col-2"></div>
           <div class="col-sm-8 d-flex align-items-justify mt-4">
-              <H2><b> <?php echo $this->lang->line('k3_head') ?></b></H4>
+              <h2><b> <?php echo $this->lang->line('k3_head') ?></b></h2>
           </div>
       </div>
       <div class="row g-4 g-lg-5 mb-5" data-aos="fade-up" data-aos-delay="200">

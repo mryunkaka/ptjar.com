@@ -1,6 +1,6 @@
   <section id="tugas_dewan_komisaris" class="tugas_dewan_komisaris">
       <div class="section-header mt-2">
-          <h1> <?php echo $this->lang->line('tugas_direksi_judul') ?></h2>
+          <h1> <?php echo $this->lang->line('tugas_direksi_judul') ?></h1>
       </div>
 
       <div class="row g-4 g-lg-5 mb-5" data-aos="fade-up" data-aos-delay="200">

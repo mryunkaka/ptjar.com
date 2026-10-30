@@ -2,7 +2,7 @@
   <!-- ======= About Section ======= -->
   <section id="profil" class="profil ">
     <div class="section-header mt-4 mb-4">
-      <h1> <?php echo $this->lang->line('rups') ?></h2>
+      <h1> <?php echo $this->lang->line('rups') ?></h1>
     </div>
 
     <div class="container" data-aos="fade-up">

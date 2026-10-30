@@ -5,7 +5,7 @@
     <!-- ======= Featured Services Section ======= -->
     <section id="featured-services" class="featured-services">
         <div class="section-header mt-4 mb-2">
-            <h1><?php echo $this->lang->line('informasi_keuangan') ?></h2>
+            <h1><?php echo $this->lang->line('informasi_keuangan') ?></h1>
         </div>
         <div class="row gy-4 mb-4 p-4">
             <div class="row">

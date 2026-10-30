@@ -4,7 +4,7 @@
   <!-- ======= Blog Section ======= -->
   <section id="blog" class="blog text-justify">
     <div class="section-header mt-4">
-      <h1>Berita</h2>
+      <h1>Berita</h1>
     </div>
     <div class="container" data-aos="fade-up">
 
@@ -19,7 +19,7 @@
               <article class="d-flex flex-column">
 
                 <div class="post-img">
-                  <img src="<?= base_url('') ?>assets/file/frontend/image/berita/berita1.jpg" alt="" class="img-fluid">
+                  <img src="<?= base_url('') ?>assets/file/frontend/image/berita/berita1.jpg" alt="Dokumentasi berita PT Jhonlin Agro Raya Tbk" class="img-fluid">
                 </div>
 
                 <h2 class="title">
@@ -52,7 +52,7 @@
               <article class="d-flex flex-column">
 
                 <div class="post-img">
-                  <img src="<?= base_url('') ?>assets/file/frontend/image/berita/berita2.jpeg" alt="" class="img-fluid">
+                  <img src="<?= base_url('') ?>assets/file/frontend/image/berita/berita2.jpeg" alt="Dokumentasi berita PT Jhonlin Agro Raya Tbk" class="img-fluid">
                 </div>
 
                 <h2 class="title">
@@ -85,7 +85,7 @@
               <article class="d-flex flex-column">
 
                 <div class="post-img">
-                  <img src="<?= base_url('') ?>assets/file/frontend/image/berita/berita3.jpg" alt="" class="img-fluid">
+                  <img src="<?= base_url('') ?>assets/file/frontend/image/berita/berita3.jpg" alt="Dokumentasi berita PT Jhonlin Agro Raya Tbk" class="img-fluid">
                 </div>
 
                 <h2 class="title">
@@ -118,7 +118,7 @@
               <article class="d-flex flex-column">
 
                 <div class="post-img">
-                  <img src="<?= base_url('') ?>assets/file/frontend/image/berita/berita4.jpg" alt="" class="img-fluid">
+                  <img src="<?= base_url('') ?>assets/file/frontend/image/berita/berita4.jpg" alt="Dokumentasi berita PT Jhonlin Agro Raya Tbk" class="img-fluid">
                 </div>
 
                 <h2 class="title">
@@ -193,7 +193,7 @@
                 <div class="mt-3">
 
                   <div class="post-item mt-3">
-                    <img src="<?= base_url('') ?>assets/file/frontend/image/berita/berita1.jpg" alt="" class="flex-shrink-0">
+                    <img src="<?= base_url('') ?>assets/file/frontend/image/berita/berita1.jpg" alt="Dokumentasi berita PT Jhonlin Agro Raya Tbk" class="flex-shrink-0">
                     <div>
                       <h4><a href="<?= base_url('') ?>Berita/detail_berita_1">PT. Jhonlin Agro Raya Bangun Pabrik Kelapa Sawit Kapasitas 60 TPH Senilai 195 Miliar</a></h4>
                       <time datetime=" 2020-01-01">Apr 8, 2022</time>
@@ -201,7 +201,7 @@
                   </div>
 
                   <div class="post-item">
-                    <img src="<?= base_url('') ?>assets/file/frontend/image/berita/berita2.jpeg" alt="" class="flex-shrink-0">
+                    <img src="<?= base_url('') ?>assets/file/frontend/image/berita/berita2.jpeg" alt="Dokumentasi berita PT Jhonlin Agro Raya Tbk" class="flex-shrink-0">
                     <div>
                       <h4><a href="<?= base_url('') ?>Berita/detail_berita_2">Peduli Kelangkaan Minyak Goreng, Jhonlin Bangun Pabrik Berkapasitas 160 Ton Per Hari</a></h4>
                       <time datetime=" 2020-01-01">Maret 1, 2022</time>
@@ -209,7 +209,7 @@
                   </div>
 
                   <div class="post-item">
-                    <img src="<?= base_url('') ?>assets/file/frontend/image/berita/berita3.jpg" alt="" class="flex-shrink-0">
+                    <img src="<?= base_url('') ?>assets/file/frontend/image/berita/berita3.jpg" alt="Dokumentasi berita PT Jhonlin Agro Raya Tbk" class="flex-shrink-0">
                     <div>
                       <h4><a href="<?= base_url('') ?>Berita/detail_berita_3">Peduli Kelangkaan Minyak Goreng, Jhonlin Bangun Pabrik Berkapasitas 160 Ton Per Hari</a></h4>
                       <time datetime="2020-01-01">Sep 11, 2021</time>
@@ -217,7 +217,7 @@
                   </div>
 
                   <div class="post-item">
-                    <img src="<?= base_url('') ?>assets/file/frontend/image/berita/berita4.jpg" alt="" class="flex-shrink-0">
+                    <img src="<?= base_url('') ?>assets/file/frontend/image/berita/berita4.jpg" alt="Dokumentasi berita PT Jhonlin Agro Raya Tbk" class="flex-shrink-0">
                     <div>
                       <h4><a href="<?= base_url('') ?>Berita/detail_berita_4">CEO EAS Group : Tahun 2022 Pabrik Biodiesel PT. Jhonlin Agro Raya Siap Produksi 30.000 KL Perbulan</a></h4>
                       <time datetime=" 2020-01-01">Sep 11, 2021</time>

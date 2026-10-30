@@ -54,6 +54,9 @@ $route['default_controller'] = 'Frontend/home';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
+$route['robots.txt'] = 'Site_seo/robots';
+$route['sitemap.xml'] = 'Site_seo/sitemap';
+
 
 
 $route['sitemanager'] = 'auth';

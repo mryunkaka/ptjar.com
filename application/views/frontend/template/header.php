@@ -1,14 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<?php $seoMeta = frontend_seo_current(isset($seo_meta) ? $seo_meta : array()); ?>
+<html lang="<?= html_escape($seoMeta['lang']) ?>">
  
  
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Jhonlin Agro Raya</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <title><?= html_escape($seoMeta['title']) ?></title>
+  <meta name="description" content="<?= html_escape($seoMeta['description']) ?>">
+  <meta name="robots" content="<?= html_escape($seoMeta['robots']) ?>">
+  <link rel="canonical" href="<?= html_escape($seoMeta['canonical']) ?>">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="PT Jhonlin Agro Raya Tbk">
+  <meta property="og:title" content="<?= html_escape($seoMeta['title']) ?>">
+  <meta property="og:description" content="<?= html_escape($seoMeta['description']) ?>">
+  <meta property="og:url" content="<?= html_escape($seoMeta['canonical']) ?>">
+  <meta property="og:locale" content="<?= $seoMeta['lang'] === 'en' ? 'en_US' : 'id_ID' ?>">
+  <meta name="twitter:card" content="summary_large_image">
+  <?php
+    $organizationSchema = array(
+      '@context' => 'https://schema.org',
+      '@type' => 'Corporation',
+      'name' => 'PT Jhonlin Agro Raya Tbk',
+      'url' => frontend_seo_canonical_base(),
+      'email' => 'corsec@ptjar.com',
+      'logo' => frontend_seo_canonical_base() . 'assets/file/frontend/image/template/iconjar.png'
+    );
+  ?>
+  <script type="application/ld+json"><?= json_encode($organizationSchema, JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT) ?></script>
 
   <!-- Favicons -->
   <link href="<?= base_url() ?>favicon.png?v=2" rel="icon" type="image/png">

@@ -3,7 +3,7 @@
     <!-- ======= About Section ======= -->
     <section id="komite" class="komite">
         <div class="section-header mt-2 mb-4">
-            <h1> <?php echo $this->lang->line('pemegang_saham_judul') ?></h2>
+            <h1> <?php echo $this->lang->line('pemegang_saham_judul') ?></h1>
         </div>
         <div class="row g-4 g-lg-5 mb-5" data-aos="fade-up" data-aos-delay="200">
             <div class="col-2"></div>

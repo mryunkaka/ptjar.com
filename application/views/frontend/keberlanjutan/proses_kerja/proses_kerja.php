@@ -3,13 +3,13 @@
     <!-- ======= About Section ======= -->
     <section id="komite" class="komite">
         <div class="section-header mt-2 mb-4">
-            <h1><?php echo $this->lang->line('proses_kerja_judul') ?></h2>
+            <h1><?php echo $this->lang->line('proses_kerja_judul') ?></h1>
         </div>
         <div class="row g-4 g-lg-5 mb-5" data-aos="fade-up" data-aos-delay="200">
             <div class="col-2"></div>
             <div class="col-sm-8 d-flex align-items-justify mt-4">
                 <div class="about-img">
-                    <img src="<?= base_url() ?>assets/file/frontend/image/keberlanjutan/alur_produksi.png" class="img-fluid" alt="">
+                    <img src="<?= base_url() ?>assets/file/frontend/image/keberlanjutan/alur_produksi.png" class="img-fluid" alt="Diagram alur produksi PT Jhonlin Agro Raya Tbk">
 
                 </div>
             </div>

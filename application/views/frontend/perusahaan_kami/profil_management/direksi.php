@@ -3,7 +3,7 @@
   <!-- ======= About Section ======= -->
   <section id="direksi" class="direksi">
     <div class="section-header mt-2">
-      <h1> <?php echo $this->lang->line('direksi') ?></h2>
+      <h1> <?php echo $this->lang->line('direksi') ?></h1>
     </div>
 
     <div class="container" data-aos="fade-up">
@@ -13,7 +13,7 @@
 
         <div class="col-lg-4">
           <div class="about-img">
-            <img src="<?= base_url() ?>assets/file/frontend/image/dirut.jpg" class="img-fluid" alt="" width="300">
+            <img src="<?= base_url() ?>assets/file/frontend/image/dirut.jpg" class="img-fluid" alt="Foto Direktur Utama PT Jhonlin Agro Raya Tbk" width="300">
 
           </div>
         </div>
@@ -51,7 +51,7 @@
 
         <div class="col-lg-4">
           <div class="about-img">
-            <img src="<?= base_url() ?>assets/file/frontend/image/dirkeu1.jpg" class="img-fluid" alt="" height="700" width="300">
+            <img src="<?= base_url() ?>assets/file/frontend/image/dirkeu1.jpg" class="img-fluid" alt="Foto Direktur Keuangan PT Jhonlin Agro Raya Tbk" height="700" width="300">
 
           </div>
         </div>

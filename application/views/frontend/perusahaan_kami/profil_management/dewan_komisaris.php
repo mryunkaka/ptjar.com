@@ -3,7 +3,7 @@
   <!-- ======= About Section ======= -->
   <section id="dewan_komisaris" class="dewan_komisaris">
     <div class="section-header mt-2">
-      <h1> <?php echo $this->lang->line('profil_komisaris_judul') ?></h2>
+      <h1> <?php echo $this->lang->line('profil_komisaris_judul') ?></h1>
     </div>
 
     <div class="container" data-aos="fade-up">
@@ -13,7 +13,7 @@
 
         <div class="col-lg-4">
           <div class="about-img">
-            <img src="<?= base_url() ?>assets/file/frontend/image/komut.jpg" class="img-fluid" alt="">
+            <img src="<?= base_url() ?>assets/file/frontend/image/komut.jpg" class="img-fluid" alt="Foto Komisaris Utama PT Jhonlin Agro Raya Tbk">
 
           </div>
         </div>
@@ -50,7 +50,7 @@
 
         <div class="col-lg-4">
           <div class="about-img">
-            <img src="<?= base_url() ?>assets/file/frontend/image/komisa.jpg" class="img-fluid" alt="">
+            <img src="<?= base_url() ?>assets/file/frontend/image/komisa.jpg" class="img-fluid" alt="Foto anggota Dewan Komisaris PT Jhonlin Agro Raya Tbk">
 
           </div>
         </div>
@@ -90,7 +90,7 @@
 
         <div class="col-lg-4">
           <div class="about-img">
-            <img src="<?= base_url() ?>assets/file/frontend/image/komind.jpg" class="img-fluid" alt="">
+            <img src="<?= base_url() ?>assets/file/frontend/image/komind.jpg" class="img-fluid" alt="Foto Komisaris Independen PT Jhonlin Agro Raya Tbk">
 
           </div>
         </div>

@@ -4,7 +4,7 @@
   <!-- ======= Blog Section ======= -->
   <section id="blog" class="blog text-justify">
     <div class="section-header mt-4">
-      <h1><?php echo $judul ?></h2>
+      <h1><?php echo $judul ?></h1>
 
     </div>
 
@@ -28,9 +28,9 @@
 
                     <div class="post-img">
                       <?php if (empty($sm['vc_image'])) { ?>
-                        <td><img src="<?= base_url() . 'assets/file/backend/upload/berita/thumbnail/default/default.png' ?> " class="img-fluid" alt="..."></td>
+                        <td><img src="<?= base_url() . 'assets/file/backend/upload/berita/thumbnail/default/default.png' ?> " class="img-fluid" alt=""></td>
                       <?php } else { ?>
-                        <td><img src="<?= base_url() . $url[0]['vc_url'] . $sm['vc_image'] ?> " class="img-fluid" alt="..."></td>
+                        <td><img src="<?= base_url() . $url[0]['vc_url'] . $sm['vc_image'] ?> " class="img-fluid" alt="<?= html_escape(strip_tags($sm['vc_title'])) ?>"></td>
                       <?php } ?>
 
                     </div>
@@ -107,9 +107,9 @@
                     <?php foreach ($list_recent as $sm) : ?>
                       <div class="post-item mt-3">
                         <?php if (empty($sm['vc_image'])) { ?>
-                          <td><img src="<?= base_url() . 'assets/file/backend/upload/berita/thumbnail/default/default.png' ?> " class="img-fluid" alt="..."></td>
+                          <td><img src="<?= base_url() . 'assets/file/backend/upload/berita/thumbnail/default/default.png' ?> " class="img-fluid" alt=""></td>
                         <?php } else { ?>
-                        <?= webp_picture_tag(base_url() . $url[0]['vc_url'] . $sm['vc_image'], '', array('class' => 'flex-shrink-0', 'loading' => 'lazy', 'decoding' => 'async')) ?>
+                        <?= webp_picture_tag(base_url() . $url[0]['vc_url'] . $sm['vc_image'], isset($sm['vc_title']) ? strip_tags($sm['vc_title']) : '', array('class' => 'flex-shrink-0', 'loading' => 'lazy', 'decoding' => 'async')) ?>
                         <?php } ?>
                         <div>
                           <h4><a href="<?= html_escape(base_url('Berita/' . rawurlencode((string) $sm['uuid']))) ?>"><?= html_escape($sm['vc_title']) ?></a></h4>

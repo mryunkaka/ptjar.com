@@ -4,7 +4,7 @@
 <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="" height="50%" width="100%"  src="<?=base_url('assets/HeroBiz-pro')?>/assets/img//hero-carousel/services-8.svg" alt="First slide">
+      <img class="" height="50%" width="100%"  src="<?=base_url('assets/HeroBiz-pro')?>/assets/img//hero-carousel/services-8.svg" alt="Ilustrasi layanan perusahaan">
     </div>
   </div>
 </div>
