@@ -80,7 +80,6 @@
 
 
 
-<script type="text/javascript" src="<?php echo base_url() . 'assets/NiceAdmin/assets/vendor/jquery/jquery.min.js' ?>"></script>
 <script type="text/javascript" src="<?php echo base_url() . 'assets/validation/dist/jquery.validate.min.js' ?>"></script>
 <link rel="stylesheet" href="<?= base_url(''); ?>assets/YearPicker/dist/yearpicker.css">
 <script src="<?= base_url(''); ?>assets/YearPicker/dist/yearpicker.js"></script>

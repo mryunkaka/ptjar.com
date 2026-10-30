@@ -85,7 +85,7 @@
 </section><!-- End Blog Details Section -->
 
 
-<div class="modal fade" id="basicModal" tabindex="-1">
+<div class="modal fade admin-modal" id="basicModal" tabindex="-1">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -113,5 +113,4 @@
     </div>
 </div><!-- End Basic Modal-->
 
-<script type="text/javascript" src="<?php echo base_url() . 'assets/NiceAdmin/assets/vendor/jquery/jquery.min.js' ?>"></script>
 <script type="text/javascript" src="<?php echo base_url() . 'assets/Backend/js/berita/berita_preview.js' ?>"></script>

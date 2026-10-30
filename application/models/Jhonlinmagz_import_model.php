@@ -10,6 +10,25 @@ class Jhonlinmagz_import_model extends CI_Model
 
     public function import_recent($categoryId, $language)
     {
+        return $this->import_page($categoryId, $language, 1, 10);
+    }
+
+    public function import_batch($categoryId, $language, $page, $perPage = 3)
+    {
+        $result = $this->import_page($categoryId, $language, (int) $page, (int) $perPage);
+        if (empty($result['ok'])) {
+            return $result;
+        }
+
+        $totalPages = isset($result['total_pages']) ? (int) $result['total_pages'] : 0;
+        $result['has_more'] = $totalPages > 0
+            ? (int) $page < $totalPages
+            : $result['count'] >= (int) $perPage;
+        return $result;
+    }
+
+    private function import_page($categoryId, $language, $page, $perPage)
+    {
         if (!$this->local_category_exists($categoryId) || !$this->local_language_exists($language)) {
             return array('ok' => FALSE, 'error' => 'Pilih kategori dan bahasa lokal yang valid.');
         }
@@ -23,7 +42,7 @@ class Jhonlinmagz_import_model extends CI_Model
         }
 
         $fields = rawurlencode('id,date,link,title,content,author,featured_media,_links,_embedded');
-        $apiResponse = $this->get_remote_body($this->apiUrl . '?status=publish&per_page=10&_embed=1&_fields=' . $fields, 2000000);
+        $apiResponse = $this->get_remote_body($this->apiUrl . '?status=publish&per_page=' . (int) $perPage . '&page=' . (int) $page . '&_embed=1&_fields=' . $fields, 6000000);
         if (empty($apiResponse['ok'])) {
             return array('ok' => FALSE, 'error' => $apiResponse['error']);
         }
@@ -33,7 +52,8 @@ class Jhonlinmagz_import_model extends CI_Model
             return array('ok' => FALSE, 'error' => 'Respons REST API Jhonlin Magazine tidak valid.');
         }
 
-        $summary = array('ok' => TRUE, 'imported' => 0, 'duplicates' => 0, 'failed' => 0, 'errors' => array());
+        $totalPages = isset($apiResponse['headers']['x-wp-totalpages']) ? (int) $apiResponse['headers']['x-wp-totalpages'] : 0;
+        $summary = array('ok' => TRUE, 'imported' => 0, 'duplicates' => 0, 'failed' => 0, 'errors' => array(), 'count' => count($posts), 'total_pages' => $totalPages);
         foreach ($posts as $post) {
             if (!is_array($post) || empty($post['id'])) {
                 $this->record_import_error($summary, 'Ada item berita dengan data sumber yang tidak lengkap.');
@@ -103,16 +123,24 @@ class Jhonlinmagz_import_model extends CI_Model
         }
 
         $body = '';
+        $responseHeaders = array();
         $curl = curl_init($url);
         $curlOptions = array(
             CURLOPT_RETURNTRANSFER => FALSE,
             CURLOPT_FOLLOWLOCATION => FALSE,
-            CURLOPT_CONNECTTIMEOUT => 8,
-            CURLOPT_TIMEOUT => 20,
+            CURLOPT_CONNECTTIMEOUT => 5,
+            CURLOPT_TIMEOUT => 12,
             CURLOPT_SSL_VERIFYPEER => TRUE,
             CURLOPT_SSL_VERIFYHOST => 2,
             CURLOPT_USERAGENT => 'PTJARCOM-News-Importer/1.0',
             CURLOPT_PROTOCOLS => CURLPROTO_HTTPS,
+            CURLOPT_HEADERFUNCTION => function ($handle, $headerLine) use (&$responseHeaders) {
+                $parts = explode(':', $headerLine, 2);
+                if (count($parts) === 2) {
+                    $responseHeaders[strtolower(trim($parts[0]))] = trim($parts[1]);
+                }
+                return strlen($headerLine);
+            },
             CURLOPT_WRITEFUNCTION => function ($handle, $chunk) use (&$body, $maxBytes) {
                 if (strlen($body) + strlen($chunk) > $maxBytes) {
                     return 0;
@@ -143,7 +171,7 @@ class Jhonlinmagz_import_model extends CI_Model
             return array('ok' => FALSE, 'error' => 'Jhonlin Magazine mengembalikan HTTP ' . $status . '.');
         }
 
-        return array('ok' => TRUE, 'body' => $body);
+        return array('ok' => TRUE, 'body' => $body, 'headers' => $responseHeaders);
     }
 
     private function ca_bundle_path()

@@ -30,6 +30,8 @@ class Management_Berita extends CI_Controller
         $data['cnt'] = $this->ManagementBerita_model->count_berita_all();
         $data['category'] = $this->ManagementBerita_model->get_category();
         $data['language'] = $this->ManagementBerita_model->get_language();
+        $data['flash_message'] = $this->session->flashdata('msg');
+        $this->session->unset_userdata('msg');
 
 
 
@@ -215,6 +217,13 @@ class Management_Berita extends CI_Controller
 
         $categoryId = (int) $this->input->post('category', TRUE);
         $language = trim((string) $this->input->post('bahasa', TRUE));
+        $importAll = $this->input->post('import_scope', TRUE) === 'all';
+        if ($importAll) {
+            $this->session->set_flashdata('msg', '<div class="alert alert-warning alert-dismissible fade show" role="alert">Tarik seluruh arsip perlu JavaScript aktif agar proses bisa dibagi menjadi batch kecil.<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>');
+            redirect('Management_Berita');
+            return;
+        }
+
         try {
             $result = $this->Jhonlinmagz_import_model->import_recent($categoryId, $language);
         } catch (Throwable $error) {
@@ -238,11 +247,104 @@ class Management_Berita extends CI_Controller
 
         $this->session->set_flashdata(
             'msg',
-            '<div class="alert alert-' . $class . ' alert-dismissible fade show" role="alert">' .
+            '<div class="alert alert-' . $class . ' alert-dismissible fade show" role="alert" data-auto-dismiss="10000">' .
                 $message .
                 '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>' .
             '</div>'
         );
         redirect('Management_Berita');
+    }
+
+    public function import_all_batch()
+    {
+        if ($this->input->method(TRUE) !== 'POST') {
+            show_error('Metode permintaan tidak diizinkan.', 405);
+        }
+
+        $page = max(1, (int) $this->input->post('page', TRUE));
+        $state = $this->session->userdata('jhonlinmagz_import_state');
+        if ($page === 1) {
+            $state = array(
+                'category' => (int) $this->input->post('category', TRUE),
+                'language' => trim((string) $this->input->post('bahasa', TRUE)),
+                'next_page' => 1,
+                'imported' => 0,
+                'duplicates' => 0,
+                'failed' => 0,
+                'errors' => array(),
+            );
+        } elseif (!is_array($state) || (int) $state['next_page'] !== $page) {
+            $this->send_import_batch_json(array('ok' => FALSE, 'error' => 'Sesi impor tidak ditemukan atau urutan batch tidak valid. Mulai ulang penarikan arsip.'));
+            return;
+        }
+
+        try {
+            $result = $this->Jhonlinmagz_import_model->import_batch(
+                $state['category'],
+                $state['language'],
+                $page,
+                1
+            );
+        } catch (Throwable $error) {
+            log_message('error', 'Jhonlin Magazine batch import failed on page ' . $page . ': ' . $error->getMessage());
+            $result = array('ok' => FALSE, 'error' => 'Terjadi kesalahan saat menarik batch berita.');
+        }
+
+        if (empty($result['ok'])) {
+            $this->session->unset_userdata('jhonlinmagz_import_state');
+            $this->send_import_batch_json(array(
+                'ok' => FALSE,
+                'partial' => $page > 1,
+                'error' => $result['error'],
+            ));
+            return;
+        }
+
+        $state['imported'] += (int) $result['imported'];
+        $state['duplicates'] += (int) $result['duplicates'];
+        $state['failed'] += (int) $result['failed'];
+        $state['errors'] = array_merge($state['errors'], $result['errors']);
+
+        if (!empty($result['has_more'])) {
+            $state['next_page'] = $page + 1;
+            $this->session->set_userdata('jhonlinmagz_import_state', $state);
+            $this->send_import_batch_json(array(
+                'ok' => TRUE,
+                'done' => FALSE,
+                'page' => $page,
+                'total_pages' => (int) $result['total_pages'],
+                'imported' => $state['imported'],
+                'duplicates' => $state['duplicates'],
+                'failed' => $state['failed'],
+            ));
+            return;
+        }
+
+        $message = '<strong>Impor seluruh berita selesai.</strong> ' .
+            $state['imported'] . ' draft baru, ' .
+            $state['duplicates'] . ' berita dilewati karena sudah pernah diimpor, dan ' .
+            $state['failed'] . ' berita gagal diproses.';
+        if (!empty($state['errors'])) {
+            $message .= '<br>' . html_escape(implode(' ', array_slice($state['errors'], 0, 3)));
+        }
+        $class = $state['failed'] > 0 ? 'warning' : 'success';
+        $this->session->set_flashdata(
+            'msg',
+            '<div class="alert alert-' . $class . ' alert-dismissible fade show" role="alert" data-auto-dismiss="10000">' .
+                $message .
+                '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>' .
+            '</div>'
+        );
+        $this->session->unset_userdata('jhonlinmagz_import_state');
+        $this->send_import_batch_json(array('ok' => TRUE, 'done' => TRUE));
+    }
+
+    private function send_import_batch_json($payload)
+    {
+        $payload['csrf_name'] = $this->security->get_csrf_token_name();
+        $payload['csrf_hash'] = $this->security->get_csrf_hash();
+        $this->output
+            ->set_content_type('application/json')
+            ->set_output(json_encode($payload));
     }
 }

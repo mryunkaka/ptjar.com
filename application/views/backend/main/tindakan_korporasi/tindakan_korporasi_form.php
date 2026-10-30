@@ -79,6 +79,5 @@
 
 
 
-<script type="text/javascript" src="<?php echo base_url() . 'assets/NiceAdmin/assets/vendor/jquery/jquery.min.js' ?>"></script>
 <script type="text/javascript" src="<?php echo base_url() . 'assets/validation/dist/jquery.validate.min.js' ?>"></script>
 <script type="text/javascript" src="<?php echo base_url() . 'assets/Backend/js/tindakan_korporasi/tindakan_korporasi.js' ?>"></script>

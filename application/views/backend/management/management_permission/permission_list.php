@@ -2,17 +2,18 @@
      <div class="row">
          <div class="col-lg-12">
 
-             <div class="card">
+             <div class="card admin-table-card">
 
                  <div class="card-body">
-                     <br>
 
-                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal1">
-                         <i class="bi bi-collection me-1"> </i>Buat Role
-                     </button>
+                     <div class="admin-table-toolbar">
+                         <button type="button" class="btn btn-primary btn-admin-md" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+                             <i class="bi bi-collection" aria-hidden="true"></i>Buat Role
+                         </button>
+                     </div>
                      <div id="messages"></div>
                      <!-- Table with stripped rows -->
-                     <div class="table-responsive ">
+                     <div class="table-responsive admin-table-wrap" role="region" tabindex="0" aria-label="Tabel hak akses">
                          <table class="table table-striped dt-responsive nowrap" id="crud_table">
                              <thead>
                                  <tr>
@@ -21,7 +22,7 @@
                                      <th scope="col">Menu</th>
 
 
-                                     <th scope="col"></th>
+                                     <th scope="col">Aksi</th>
 
                                  </tr>
 
@@ -46,7 +47,7 @@
 
 
 
-     <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModal1Label" aria-hidden="true">
+     <div class="modal fade admin-modal" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModal1Label" aria-hidden="true">
          <div class="modal-dialog modal-lg">
              <form id="from">
                  <div class="modal-content">
@@ -76,7 +77,7 @@
 
  </section>
 
- <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+ <div class="modal fade admin-modal" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
      <div class="modal-dialog modal-lg">
 
          <div class="modal-content">
@@ -99,7 +100,6 @@
      <!-- Modal -->
 
 
-     <script type="text/javascript" src="<?php echo base_url() . 'assets/NiceAdmin/assets/vendor/jquery/jquery.min.js' ?>"></script>
      <script type="text/javascript" src="<?php echo base_url() . 'assets/Backend/js/global/global.js' ?>"></script>
 
      <script type="text/javascript" src="<?php echo base_url() . 'assets/validation/dist/jquery.validate.min.js' ?>"></script>

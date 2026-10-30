@@ -1,19 +1,16 @@
-    </section>
     <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="logoutModalLabel" aria-hidden="true">
+    <div class="modal fade admin-modal" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="logoutModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="logoutModalLabel">Ready to Leave?</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
+                    <h5 class="modal-title" id="logoutModalLabel">Keluar dari Dashboard?</h5>
+                    <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Tutup"></button>
                 </div>
-                <div class="modal-body">Pilih "Logout" untuk mengakhiri sesi anda.</div>
+                <div class="modal-body">Pilih Keluar untuk mengakhiri sesi Anda.</div>
                 <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Batal</button>
                     <form method="post" action="<?= html_escape(base_url('auth/logout')); ?>">
-                        <button class="btn btn-primary" type="submit">Logout</button>
+                        <button class="btn btn-primary" type="submit">Keluar</button>
                     </form>
                 </div>
             </div>
@@ -37,17 +34,11 @@
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
     <!-- Vendor JS Files -->
-    <script src="<?= base_url('assets/NiceAdmin/'); ?>assets/vendor/apexcharts/apexcharts.min.js"></script>
     <script src="<?= base_url('assets/NiceAdmin/'); ?>assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="<?= base_url('assets/NiceAdmin/'); ?>assets/vendor/chart.js/chart.min.js"></script>
-    <script src="<?= base_url('assets/NiceAdmin/'); ?>assets/vendor/echarts/echarts.min.js"></script>
-    <script src="<?= base_url('assets/NiceAdmin/'); ?>assets/vendor/quill/quill.min.js"></script>
-    <script src="<?= base_url('assets/NiceAdmin/'); ?>assets/vendor/simple-datatables/simple-datatables.js"></script>
-    <script src="<?= base_url('assets/NiceAdmin/'); ?>assets/vendor/tinymce/tinymce.min.js"></script>
-    <script src="<?= base_url('assets/NiceAdmin/'); ?>assets/vendor/php-email-form/validate.js"></script>
 
     <!-- Template Main JS File -->
     <script src="<?= base_url('assets/NiceAdmin/'); ?>assets/js/main.js"></script>
+    <script src="<?= base_url('assets/Backend/js/admin-ui.js'); ?>"></script>
 
     <script>
     (function () {

@@ -39,7 +39,7 @@
             </form><!-- End floating Labels Form -->
             <br><br><br> <br><br><br>
             <div class="text-center mt-4">
-                <button id="save" class="btn btn-primary" onclick="tinyMCE.triggerSave(true,true);">Save</button>
+                <button id="save" class="btn btn-primary">Save</button>
 
             </div>
         </div>
@@ -49,7 +49,6 @@
 
 
 
-<script type="text/javascript" src="<?php echo base_url() . 'assets/NiceAdmin/assets/vendor/jquery/jquery.min.js' ?>"></script>
 
 <script type="text/javascript" src="<?php echo base_url() . 'assets/select2/dist/js/select2.min.js' ?>"></script>
 <link href="<?= base_url(''); ?>assets/select2/dist/css/select2.min.css" rel="stylesheet" type="text/css">

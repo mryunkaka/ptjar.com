@@ -98,7 +98,7 @@
             </form><!-- End floating Labels Form -->
             <br><br><br> <br><br><br>
             <div class="text-center mt-4">
-                <button id="save" class="btn btn-primary" onclick="tinyMCE.triggerSave(true,true);">Save</button>
+                <button id="save" class="btn btn-primary">Save</button>
 
             </div>
         </div>
@@ -108,7 +108,6 @@
 
 
 
-<script type="text/javascript" src="<?php echo base_url() . 'assets/NiceAdmin/assets/vendor/jquery/jquery.min.js' ?>"></script>
 
 <script type="text/javascript" src="<?php echo base_url() . 'assets/validation/dist/jquery.validate.min.js' ?>"></script>
 <link rel="stylesheet" href="<?= base_url(''); ?>assets/YearPicker/dist/yearpicker.css">

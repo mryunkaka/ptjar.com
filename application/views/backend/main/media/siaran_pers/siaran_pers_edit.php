@@ -196,8 +196,8 @@
 
 
 
-<script type="text/javascript" src="<?php echo base_url() . 'assets/NiceAdmin/assets/vendor/jquery/jquery.min.js' ?>"></script>
 
+<script src="<?= base_url('assets/NiceAdmin/assets/vendor/tinymce/tinymce.min.js'); ?>"></script>
 <script type="text/javascript" src="<?php echo base_url() . 'assets/select2/dist/js/select2.min.js' ?>"></script>
 <link href="<?= base_url(''); ?>assets/select2/dist/css/select2.min.css" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="<?php echo base_url() . 'assets/Backend/js/siaran_pers/pers_edit1.js' ?>"></script>

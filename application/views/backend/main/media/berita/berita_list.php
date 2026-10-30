@@ -2,10 +2,10 @@
      <div class="row">
          <div class="col-lg-12">
 
-             <div class="card">
+             <div class="card admin-table-card">
                  <div class="card-body">
-                     <div class="row mt-2">
-                         <div class="col-2">
+                     <div class="row mt-2 admin-table-toolbar">
+                         <div class="col-auto">
                              <a href="<?= base_url() ?>Management_Berita/berita_form" class="badge bg-info text-dark p-3 mb-3"><i class="bi bi-info-circle me-1"></i>
                                  Tambah Berita
                              </a>
@@ -14,8 +14,8 @@
                      <div class="card border mb-3">
                          <div class="card-body">
                              <h5 class="card-title">Impor dari Jhonlin Magazine</h5>
-                             <p class="mb-3">Ambil hingga 10 berita terbaru. Berita baru akan disimpan sebagai draft untuk ditinjau.</p>
-                             <form method="post" action="<?= site_url('Management_Berita/import_from_jhonlinmagz') ?>" class="row g-2 align-items-end">
+                             <p class="mb-3">Impor 10 berita terbaru atau tarik seluruh arsip. Berita baru disimpan sebagai draft untuk ditinjau.</p>
+                             <form id="importNewsForm" method="post" action="<?= site_url('Management_Berita/import_from_jhonlinmagz') ?>" data-batch-url="<?= site_url('Management_Berita/import_all_batch') ?>" class="row g-2 align-items-end">
                                  <input type="hidden" name="<?= html_escape($this->security->get_csrf_token_name()) ?>" value="<?= html_escape($this->security->get_csrf_hash()) ?>">
                                  <div class="col-md-4">
                                      <label for="import_category" class="form-label">Kategori lokal</label>
@@ -35,17 +35,22 @@
                                          <?php endforeach ?>
                                      </select>
                                  </div>
-                                 <div class="col-md-3">
-                                     <button type="submit" class="btn btn-primary" <?= empty($category) || empty($language) ? 'disabled' : '' ?>>
+                                 <div class="col-md-5 d-flex flex-wrap gap-2">
+                                     <button type="submit" name="import_scope" value="recent" class="btn btn-primary" <?= empty($category) || empty($language) ? 'disabled' : '' ?>>
                                          <i class="bi bi-cloud-download me-1"></i> Impor berita terbaru
+                                     </button>
+                                     <button type="submit" name="import_scope" value="all" class="btn btn-outline-primary" <?= empty($category) || empty($language) ? 'disabled' : '' ?>>
+                                         <i class="bi bi-cloud-arrow-down me-1"></i> Tarik semua berita
                                      </button>
                                  </div>
                              </form>
+                             <div id="importProgress" class="mt-3" aria-live="polite"></div>
                          </div>
                      </div>
                      <!-- Table with stripped rows -->
-                     <div id="messages"><?= $this->session->flashdata('msg') ?> </div>
-                     <table class="table table-striped">
+                     <div id="messages"><?= isset($flash_message) ? $flash_message : '' ?> </div>
+                     <div class="table-responsive admin-table-wrap" role="region" tabindex="0" aria-label="Tabel berita">
+                         <table class="table table-striped">
                          <thead>
                              <tr>
                                  <th scope="col">#</th>
@@ -55,7 +60,7 @@
                                  <th scope="col">POST</th>
                                  <th scope="col">TANGGAL PUBLISH</th>
                                  <th scope="col">BAHASA</th>
-                                 <th scope="col"></th>
+                                 <th scope="col">Aksi</th>
                              </tr>
                          </thead>
                          <tbody>
@@ -116,6 +121,7 @@
                          </tbody>
 
                      </table>
+                     </div>
                      <!-- End Table with stripped rows -->
                      <?= $pagination ?>
                  </div>
@@ -129,7 +135,7 @@
 
 
 
-     <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+     <div class="modal fade admin-modal" id="deleteModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
          <div class="modal-dialog modal-lg">
 
              <div class="modal-content">
@@ -150,6 +156,5 @@
      </div>
 
  </section>
- <script type="text/javascript" src="<?php echo base_url() . 'assets/NiceAdmin/assets/vendor/jquery/jquery.min.js' ?>"></script>
 
  <script type="text/javascript" src="<?php echo base_url() . 'assets/Backend/js/berita/berita_list.js' ?>"></script>

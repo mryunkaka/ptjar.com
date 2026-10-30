@@ -68,7 +68,6 @@
 
 
 
-<script type="text/javascript" src="<?php echo base_url() . 'assets/NiceAdmin/assets/vendor/jquery/jquery.min.js' ?>"></script>
 
 <script type="text/javascript" src="<?php echo base_url() . 'assets/validation/dist/jquery.validate.min.js' ?>"></script>
 <script type="text/javascript" src="<?php echo base_url() . 'assets/Backend/js/laporan_tahunan/laporan_tahunan_edit1.js' ?>"></script>

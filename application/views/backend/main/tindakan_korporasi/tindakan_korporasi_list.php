@@ -2,10 +2,10 @@
      <div class="row">
          <div class="col-lg-12">
 
-             <div class="card">
+             <div class="card admin-table-card">
                  <div class="card-body">
-                     <div class="row mt-2">
-                         <div class="col-2">
+                     <div class="row mt-2 admin-table-toolbar">
+                         <div class="col-auto">
                              <a href="<?= base_url() ?>Management_Tindakan_Korporasi/laporan_form" class="badge bg-info text-dark p-3 mb-3"><i class="bi bi-info-circle me-1"></i>
                                  Tambah Laporan
                              </a>
@@ -14,7 +14,8 @@
                      </div>
                      <div id="messages"><?= $this->session->flashdata('msg') ?> </div>
                      <!-- Table with stripped rows -->
-                     <table class="table table-striped">
+                     <div class="table-responsive admin-table-wrap" role="region" tabindex="0" aria-label="Tabel tindakan korporasi">
+                         <table class="table table-striped">
                          <thead>
                              <tr>
                                  <th scope="col">#</th>
@@ -25,7 +26,7 @@
                                  <th scope="col">File</th>
                                  <th scope="col">Catatan</th>
 
-                                 <th class="col-1"></th>
+                                 <th scope="col">Aksi</th>
                              </tr>
                          </thead>
 
@@ -70,6 +71,7 @@
                          </tbody>
 
                      </table>
+                     </div>
                      <!-- End Table with stripped rows -->
                      <?= $pagination ?>
                  </div>
@@ -87,7 +89,7 @@
 
  </section>
 
- <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+ <div class="modal fade admin-modal" id="deleteModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
      <div class="modal-dialog modal-lg">
 
          <div class="modal-content">
@@ -108,5 +110,4 @@
  </div>
 
  </section>
- <script type="text/javascript" src="<?php echo base_url() . 'assets/NiceAdmin/assets/vendor/jquery/jquery.min.js' ?>"></script>
  <script type="text/javascript" src="<?php echo base_url() . 'assets/Backend/js/tindakan_korporasi/tindakan_korporasi_list.js' ?>"></script>
