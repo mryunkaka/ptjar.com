@@ -14,7 +14,7 @@
         <div class="col-lg-8">
 
           <div class="row gy-4 posts-list">
-            <?php if (isset($list[0]['nu_id']) !== null) {
+            <?php if (!empty($list)) {
               $i = 1; ?>
               <?php foreach ($list as $sm) : ?>
 
@@ -61,6 +61,10 @@
 
                 <?php $i++; ?>
               <?php endforeach ?>
+            <?php } else { ?>
+              <div class="col-12">
+                <p class="text-center"><?= html_escape($this->lang->line('berita_tidak_tersedia')) ?></p>
+              </div>
             <?php } ?>
 
 

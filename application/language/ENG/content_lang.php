@@ -31,7 +31,7 @@ $lang['nav_3_6'] = "Annual Report";
 $lang['nav_3_7'] = "Sustainability Report";
 $lang['nav_4'] = "Media";
 $lang['nav_4_1'] = "News";
-$lang['nav_4_2'] = "Pers Release";
+$lang['nav_4_2'] = "Press Releases";
 $lang['nav_5'] = "CSR";
 $lang['nav_5_1'] = "Community Social Activities";
 $lang['nav_5_2'] = "HSE";
@@ -412,7 +412,9 @@ $lang['target_produksi_judul'] = "Annual Production Target";
 
 // ------------------------ Berita
 $lang['berita_judul'] = "News";
-$lang['siaran_pers_judul'] = "Pers Realese";
+$lang['siaran_pers_judul'] = "Press Releases";
+$lang['berita_tidak_tersedia'] = "No English news articles are available yet.";
+$lang['siaran_pers_tidak_tersedia'] = "No English press releases are available yet.";
 
 
 // ------------------------ CSR

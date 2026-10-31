@@ -105,16 +105,13 @@ class Frontend_Media extends CI_Controller
         $data['title'] = 'Management Berita';
         $lang = $this->session->userdata('site_lang');
         $data['url'] = $this->ManagementBerita_model->get_conf_url_t();
-        $data['cnt'] = $this->ManagementBerita_model->count_berita($lang);
         $data['list_recent'] = $this->ManagementBerita_model->get_berita_list_recent($lang);
+        $data['cnt'] = $this->ManagementBerita_model->count_berita($lang);
         if (isset($data['cnt'][0])) {
             $cnt = (int) $data['cnt'][0]['cnt'];
         } else {
             $cnt = 0;
         }
-
-
-
         $this->load->library('pagination');
 
         $config['base_url'] = site_url('Berita/pages');
@@ -199,16 +196,13 @@ class Frontend_Media extends CI_Controller
         $data['title'] = 'Management Berita';
         $lang = $this->session->userdata('site_lang');
         $data['url'] = $this->ManagementSiaranPers_model->get_conf_url_t();
-        $data['cnt'] = $this->ManagementSiaranPers_model->count_berita($lang);
         $data['list_recent'] = $this->ManagementSiaranPers_model->get_berita_list_recent($lang);
+        $data['cnt'] = $this->ManagementSiaranPers_model->count_berita($lang);
         if (isset($data['cnt'][0])) {
             $cnt = (int) $data['cnt'][0]['cnt'];
         } else {
             $cnt = 0;
         }
-
-
-
         $this->load->library('pagination');
 
         $config['base_url'] = site_url('Siaran_Pers/pages');
@@ -263,7 +257,7 @@ class Frontend_Media extends CI_Controller
         $data['tabtitle'] = 'Management Berita';
         $data['title'] = 'Management Berita';
         $lang = $this->session->userdata('site_lang');
-        $data['detail'] = $this->ManagementSiaranPers_model->get_berita_detail($id);
+        $data['detail'] = $this->ManagementSiaranPers_model->get_berita_detail($id, TRUE);
         if (empty($data['detail'])) {
             show_404();
             return;

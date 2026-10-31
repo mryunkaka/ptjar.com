@@ -427,6 +427,8 @@ $lang['target_produksi_judul'] = "Target Produksi Perusahaan";
 // ------------------------ Berita
 $lang['berita_judul'] = "Berita";
 $lang['siaran_pers_judul'] = "Siaran Pers";
+$lang['berita_tidak_tersedia'] = "Belum ada berita yang tersedia.";
+$lang['siaran_pers_tidak_tersedia'] = "Belum ada siaran pers yang tersedia.";
 
 
 // ------------------------ CSR

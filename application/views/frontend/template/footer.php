@@ -58,7 +58,7 @@
           <h4>Media</h4>
           <ul>
             <li><i class="bi bi-chevron-right"></i> <a href="<?= base_url() ?>Berita"><?php echo $this->lang->line('nav_4_1') ?></a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href=""><?php echo $this->lang->line('nav_4_2') ?></a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="<?= base_url() ?>Siaran_Pers"><?php echo $this->lang->line('nav_4_2') ?></a></li>
 
           </ul>
         </div>

@@ -84,7 +84,7 @@ class ManagementSiaranPers_model extends CI_Model
 
     public function count_berita($lang)
     {
-        $hasil = $this->db->query("SELECT COUNT(nu_id) as cnt  FROM tr_posts WHERE vc_type='pers'and vc_lang=?", array($lang));
+        $hasil = $this->db->query("SELECT COUNT(nu_id) as cnt  FROM tr_posts WHERE vc_type='pers' AND vc_lang=? AND vc_status=1 AND dt_deleted IS NULL", array($lang));
         return $hasil->result_array();
     }
 
@@ -117,7 +117,7 @@ class ManagementSiaranPers_model extends CI_Model
         FROM
 	    tr_posts a
         WHERE
-	    a.vc_type = 'pers' and a.vc_lang=? and a.dt_deleted IS NULL
+	    a.vc_type = 'pers' and a.vc_lang=? and a.vc_status=1 and a.dt_deleted IS NULL
         ORDER BY
 	    a.dt_published DESC,
 	    (SELECT MAX(image.int_thumbnail) FROM tr_post_images image WHERE image.nu_post_id = a.nu_id AND image.dt_deleted IS NULL) DESC
@@ -146,14 +146,15 @@ class ManagementSiaranPers_model extends CI_Model
         FROM
 	        tr_posts a
         WHERE
-	        a.vc_type = 'pers' and a.vc_lang=? and a.dt_deleted IS NULL
+	        a.vc_type = 'pers' and a.vc_lang=? and a.vc_status=1 and a.dt_deleted IS NULL
         ORDER BY
 	a.dt_published DESC LIMIT 4", array($lang));
         return $hasil->result_array();
     }
 
-    public function get_berita_detail($id)
+    public function get_berita_detail($id, $publishedOnly = FALSE)
     {
+        $publicFilter = $publishedOnly ? 'AND a.vc_status=1 AND a.dt_deleted IS NULL' : '';
         $hasil = $this->db->query("SELECT
 	a.nu_id,
 	a.uuid,
@@ -175,7 +176,7 @@ class ManagementSiaranPers_model extends CI_Model
 	LEFT JOIN tr_post_tag AS c ON a.nu_id = c.vc_post_id
 	LEFT JOIN tr_tags AS d ON c.vc_tag_id = d.nu_id 
     WHERE
-     a.uuid=?", array($id));
+     a.uuid=? " . $publicFilter, array($id));
         return $hasil->result_array();
     }
     public function get_detail_photo($uuid)
