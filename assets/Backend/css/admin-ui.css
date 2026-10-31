@@ -209,6 +209,50 @@ h1, h2, h3, h4, h5, h6,
   -webkit-overflow-scrolling: touch;
 }
 
+.admin-content .admin-pagination {
+  margin-top: 18px;
+  overflow-x: auto;
+  padding: 2px 0 6px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.admin-content .admin-pagination .pagination {
+  flex-wrap: nowrap;
+  width: max-content;
+  min-width: 100%;
+  margin: 0;
+  gap: 4px;
+}
+
+.admin-content .admin-pagination .page-link {
+  display: grid;
+  min-width: 42px;
+  min-height: 42px;
+  place-items: center;
+  border: 1px solid var(--admin-line);
+  border-radius: 9px;
+  color: var(--admin-accent);
+  text-decoration: none;
+  transition: color 0.18s ease, background-color 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+}
+
+.admin-content .admin-pagination a.page-link:hover {
+  border-color: var(--admin-accent);
+  background: var(--admin-accent-soft);
+  color: var(--admin-accent);
+}
+
+.admin-content .admin-pagination .page-item.active .page-link {
+  border-color: var(--admin-accent);
+  background: var(--admin-accent);
+  color: #fff;
+}
+
+.admin-content .admin-pagination .page-item.disabled .page-link {
+  color: #9aa5b3;
+  pointer-events: none;
+}
+
 .admin-content .table {
   margin-bottom: 0;
   color: var(--admin-ink);

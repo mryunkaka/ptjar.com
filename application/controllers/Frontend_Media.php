@@ -55,29 +55,26 @@ class Frontend_Media extends CI_Controller
         $config['total_rows'] = $cnt; //total row
         $config['per_page'] = 4;  //show record per halaman
         $config["uri_segment"] = 3;  // uri parameter
-        $choice = $config["total_rows"] / $config["per_page"];
-        $config["num_links"] = floor($choice);
-
-
-        // Membuat Style pagination untuk BootStrap v4
+        $config["num_links"] = 2;
         $config['first_link']       = 'First';
         $config['last_link']        = 'Last';
         $config['next_link']        = 'Next';
         $config['prev_link']        = 'Prev';
-        $config['full_tag_open']    = '<div class="blog-pagination"><ul class="justify-content-center">';
-        $config['full_tag_close']   = '</ul></div>';
-        $config['num_tag_open']     = '<li><span class="nav-link">';
-        $config['num_tag_close']    = '</span></li>';
-        $config['cur_tag_open']     = '<li class="nav-link active"><span class="nav-link">';
-        $config['cur_tag_close']    = '</span></li>';
-        $config['next_tag_open']    = '<li><span class="nav-link">';
-        $config['next_tagl_close']  = '<span aria-hidden="true">&raquo;</span></span></li>';
-        $config['prev_tag_open']    = '<li><span class="nav-link">';
-        $config['prev_tagl_close']  = '</span>Next</li>';
-        $config['first_tag_open']   = '<li><span class="nav-link">';
-        $config['first_tagl_close'] = '</span></li>';
-        $config['last_tag_open']    = '<li><span class="nav-link">';
-        $config['last_tagl_close']  = '</span></li>';
+        $config['full_tag_open']    = '<div class="blog-pagination"><nav aria-label="Navigasi halaman"><ul class="justify-content-center">';
+        $config['full_tag_close']   = '</ul></nav></div>';
+        $config['attributes']       = array('class' => 'nav-link');
+        $config['num_tag_open']     = '<li>';
+        $config['num_tag_close']    = '</li>';
+        $config['cur_tag_open']     = '<li class="active" aria-current="page"><span class="nav-link">';
+        $config['cur_tag_close']    = '<span class="visually-hidden"> (halaman aktif)</span></span></li>';
+        $config['next_tag_open']    = '<li>';
+        $config['next_tag_close']   = '</li>';
+        $config['prev_tag_open']    = '<li>';
+        $config['prev_tag_close']   = '</li>';
+        $config['first_tag_open']   = '<li>';
+        $config['first_tag_close']  = '</li>';
+        $config['last_tag_open']    = '<li>';
+        $config['last_tag_close']   = '</li>';
 
         $this->pagination->initialize($config);
         $data['page'] = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
@@ -118,29 +115,26 @@ class Frontend_Media extends CI_Controller
         $config['total_rows'] = $cnt; //total row
         $config['per_page'] = 4;  //show record per halaman
         $config["uri_segment"] = 3;  // uri parameter
-        $choice = $config["total_rows"] / $config["per_page"];
-        $config["num_links"] = floor($choice);
-
-
-        // Membuat Style pagination untuk BootStrap v4
+        $config["num_links"] = 2;
         $config['first_link']       = 'First';
         $config['last_link']        = 'Last';
         $config['next_link']        = 'Next';
         $config['prev_link']        = 'Prev';
-        $config['full_tag_open']    = '<div class="blog-pagination"><ul class="justify-content-center">';
-        $config['full_tag_close']   = '</ul></div>';
-        $config['num_tag_open']     = '<li><span class="nav-link">';
-        $config['num_tag_close']    = '</span></li>';
-        $config['cur_tag_open']     = '<li class="nav-link active"><span class="nav-link">';
-        $config['cur_tag_close']    = '</span></li>';
-        $config['next_tag_open']    = '<li><span class="nav-link">';
-        $config['next_tagl_close']  = '<span aria-hidden="true">&raquo;</span></span></li>';
-        $config['prev_tag_open']    = '<li><span class="nav-link">';
-        $config['prev_tagl_close']  = '</span>Next</li>';
-        $config['first_tag_open']   = '<li><span class="nav-link">';
-        $config['first_tagl_close'] = '</span></li>';
-        $config['last_tag_open']    = '<li><span class="nav-link">';
-        $config['last_tagl_close']  = '</span></li>';
+        $config['full_tag_open']    = '<div class="blog-pagination"><nav aria-label="Navigasi halaman"><ul class="justify-content-center">';
+        $config['full_tag_close']   = '</ul></nav></div>';
+        $config['attributes']       = array('class' => 'nav-link');
+        $config['num_tag_open']     = '<li>';
+        $config['num_tag_close']    = '</li>';
+        $config['cur_tag_open']     = '<li class="active" aria-current="page"><span class="nav-link">';
+        $config['cur_tag_close']    = '<span class="visually-hidden"> (halaman aktif)</span></span></li>';
+        $config['next_tag_open']    = '<li>';
+        $config['next_tag_close']   = '</li>';
+        $config['prev_tag_open']    = '<li>';
+        $config['prev_tag_close']   = '</li>';
+        $config['first_tag_open']   = '<li>';
+        $config['first_tag_close']  = '</li>';
+        $config['last_tag_open']    = '<li>';
+        $config['last_tag_close']   = '</li>';
 
         $this->pagination->initialize($config);
         $data['page'] = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
@@ -209,29 +203,26 @@ class Frontend_Media extends CI_Controller
         $config['total_rows'] = $cnt; //total row
         $config['per_page'] = 4;  //show record per halaman
         $config["uri_segment"] = 3;  // uri parameter
-        $choice = $config["total_rows"] / $config["per_page"];
-        $config["num_links"] = floor($choice);
-
-
-        // Membuat Style pagination untuk BootStrap v4
+        $config["num_links"] = 2;
         $config['first_link']       = 'First';
         $config['last_link']        = 'Last';
         $config['next_link']        = 'Next';
         $config['prev_link']        = 'Prev';
-        $config['full_tag_open']    = '<div class="blog-pagination"><ul class="justify-content-center">';
-        $config['full_tag_close']   = '</ul></div>';
-        $config['num_tag_open']     = '<li><span class="nav-link">';
-        $config['num_tag_close']    = '</span></li>';
-        $config['cur_tag_open']     = '<li class="nav-link active"><span class="nav-link">';
-        $config['cur_tag_close']    = '</span></li>';
-        $config['next_tag_open']    = '<li><span class="nav-link">';
-        $config['next_tagl_close']  = '<span aria-hidden="true">&raquo;</span></span></li>';
-        $config['prev_tag_open']    = '<li><span class="nav-link">';
-        $config['prev_tagl_close']  = '</span>Next</li>';
-        $config['first_tag_open']   = '<li><span class="nav-link">';
-        $config['first_tagl_close'] = '</span></li>';
-        $config['last_tag_open']    = '<li><span class="nav-link">';
-        $config['last_tagl_close']  = '</span></li>';
+        $config['full_tag_open']    = '<div class="blog-pagination"><nav aria-label="Navigasi halaman"><ul class="justify-content-center">';
+        $config['full_tag_close']   = '</ul></nav></div>';
+        $config['attributes']       = array('class' => 'nav-link');
+        $config['num_tag_open']     = '<li>';
+        $config['num_tag_close']    = '</li>';
+        $config['cur_tag_open']     = '<li class="active" aria-current="page"><span class="nav-link">';
+        $config['cur_tag_close']    = '<span class="visually-hidden"> (halaman aktif)</span></span></li>';
+        $config['next_tag_open']    = '<li>';
+        $config['next_tag_close']   = '</li>';
+        $config['prev_tag_open']    = '<li>';
+        $config['prev_tag_close']   = '</li>';
+        $config['first_tag_open']   = '<li>';
+        $config['first_tag_close']  = '</li>';
+        $config['last_tag_open']    = '<li>';
+        $config['last_tag_close']   = '</li>';
 
         $this->pagination->initialize($config);
         $data['page'] = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
